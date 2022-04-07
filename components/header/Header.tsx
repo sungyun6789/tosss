@@ -16,6 +16,12 @@ const Header = () => {
           <article>
             <div>
               <Link href="/">
+                <a>토스뱅크</a>
+              </Link>
+            </div>
+
+            <div>
+              <Link href="/">
                 <a>혜택</a>
               </Link>
             </div>
