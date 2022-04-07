@@ -1,13 +1,7 @@
-import Header from '@components/header/Header';
-
 import { NextPage } from 'next';
 
 const index: NextPage = () => {
-  return (
-    <>
-      <Header />
-    </>
-  );
+  return <>Home</>;
 };
 
 export default index;
