@@ -7,7 +7,11 @@ const Header = () => {
     <header>
       <NavWrapper>
         <Nav>
-          <Logo>LOGO</Logo>
+          <Logo>
+            <Link href="/">
+              <a>LOGO</a>
+            </Link>
+          </Logo>
 
           <article>
             <Link href="/">
