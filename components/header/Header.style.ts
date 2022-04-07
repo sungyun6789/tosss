@@ -7,10 +7,8 @@ export const NavWrapper = styled.section`
   a {
     color: #4e5968;
     font-size: 15px;
-    padding: 20px;
     line-height: 20px;
     text-decoration: none;
-    cursor: pointer;
   }
 `;
 
@@ -22,8 +20,21 @@ export const Nav = styled.nav`
 
   article {
     width: 92%;
+    height: 100%;
     display: flex;
+    align-items: center;
     justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+
+    div {
+      padding: 12px 20px;
+      cursor: pointer;
+      :hover {
+        border-radius: 8px;
+        background-color: #f0f0f0;
+      }
+    }
   }
 `;
 

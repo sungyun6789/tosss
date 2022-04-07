@@ -14,21 +14,29 @@ const Header = () => {
           </Logo>
 
           <article>
-            <Link href="/">
-              <a>혜택</a>
-            </Link>
+            <div>
+              <Link href="/">
+                <a>혜택</a>
+              </Link>
+            </div>
 
-            <Link href="/">
-              <a>송금</a>
-            </Link>
+            <div>
+              <Link href="/">
+                <a>송금</a>
+              </Link>
+            </div>
 
-            <Link href="/">
-              <a>주식</a>
-            </Link>
+            <div>
+              <Link href="/">
+                <a>주식</a>
+              </Link>
+            </div>
 
-            <Link href="/">
-              <a>전체</a>
-            </Link>
+            <div>
+              <Link href="/">
+                <a>전체</a>
+              </Link>
+            </div>
           </article>
         </Nav>
       </NavWrapper>
