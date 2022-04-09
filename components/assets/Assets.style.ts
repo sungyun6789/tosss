@@ -19,8 +19,14 @@ export const AssetsUL = styled.ul`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    height: 60px;
 
-    margin-bottom: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+    :hover {
+      background-color: #fafafa;
+      border-radius: 15px;
+    }
   }
 
   div {
