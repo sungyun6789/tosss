@@ -15,31 +15,31 @@ const Header = () => {
 
           <article>
             <div>
-              <Link href="/">
+              <Link href="/tossbank">
                 <a>토스뱅크</a>
               </Link>
             </div>
 
             <div>
-              <Link href="/">
+              <Link href="/benefits">
                 <a>혜택</a>
               </Link>
             </div>
 
             <div>
-              <Link href="/">
+              <Link href="/transfer">
                 <a>송금</a>
               </Link>
             </div>
 
             <div>
-              <Link href="/">
+              <Link href="/stock">
                 <a>주식</a>
               </Link>
             </div>
 
             <div>
-              <Link href="/">
+              <Link href="/all">
                 <a>전체</a>
               </Link>
             </div>
