@@ -1,11 +1,18 @@
-import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
 
-const AssetsDetail: NextPage = () => {
+import mock from '../../mock.json';
+
+const AssetsPage = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  return <div>{id}</div>;
+  const data = id ? mock.filter((data) => data.wallet_name === id[1])[0] : undefined;
+
+  return (
+    <section>
+      <h1>{data?.wallet_name}</h1>
+    </section>
+  );
 };
 
-export default AssetsDetail;
+export default AssetsPage;
