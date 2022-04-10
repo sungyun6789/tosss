@@ -1,7 +1,8 @@
 import { useRouter } from 'next/router';
 
+import mock from '../../mock.json';
+
 import { AssetsSection, AssetsTitle, AssetsUL } from './Assets.style';
-import mock from './mock.json';
 
 const Assets = () => {
   const router = useRouter();
