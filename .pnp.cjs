@@ -55,6 +55,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.5.1"],\
             ["react", "npm:17.0.2"],\
             ["react-dom", "virtual:bcccfbc3736221125a9ec5ea8038c3024d2c5e5c85bcc354af7db3965dc0db3eff548b6eb0f3594f3becb64e74eb1f7e8eda79bcf9a52e7a6a35e9ed22be44ee#npm:17.0.2"],\
+            ["recoil", "virtual:bcccfbc3736221125a9ec5ea8038c3024d2c5e5c85bcc354af7db3965dc0db3eff548b6eb0f3594f3becb64e74eb1f7e8eda79bcf9a52e7a6a35e9ed22be44ee#npm:0.7.0"],\
             ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
@@ -1257,6 +1258,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.5.1"],\
             ["react", "npm:17.0.2"],\
             ["react-dom", "virtual:bcccfbc3736221125a9ec5ea8038c3024d2c5e5c85bcc354af7db3965dc0db3eff548b6eb0f3594f3becb64e74eb1f7e8eda79bcf9a52e7a6a35e9ed22be44ee#npm:17.0.2"],\
+            ["recoil", "virtual:bcccfbc3736221125a9ec5ea8038c3024d2c5e5c85bcc354af7db3965dc0db3eff548b6eb0f3594f3becb64e74eb1f7e8eda79bcf9a52e7a6a35e9ed22be44ee#npm:0.7.0"],\
             ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
@@ -2557,6 +2559,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["hamt_plus", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/hamt_plus-npm-1.0.2-67a52ee1df-af26ea32db.zip/node_modules/hamt_plus/",\
+          "packageDependencies": [\
+            ["hamt_plus", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["has", [\
         ["npm:1.0.3", {\
           "packageLocation": "./.yarn/cache/has-npm-1.0.3-b7f00631c1-b9ad53d53b.zip/node_modules/has/",\
@@ -3721,6 +3732,37 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["inherits", "npm:2.0.4"],\
             ["string_decoder", "npm:1.3.0"],\
             ["util-deprecate", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["recoil", [\
+        ["npm:0.7.0", {\
+          "packageLocation": "./.yarn/cache/recoil-npm-0.7.0-ac59490325-e190db5153.zip/node_modules/recoil/",\
+          "packageDependencies": [\
+            ["recoil", "npm:0.7.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:bcccfbc3736221125a9ec5ea8038c3024d2c5e5c85bcc354af7db3965dc0db3eff548b6eb0f3594f3becb64e74eb1f7e8eda79bcf9a52e7a6a35e9ed22be44ee#npm:0.7.0", {\
+          "packageLocation": "./.yarn/__virtual__/recoil-virtual-b753bcd76f/0/cache/recoil-npm-0.7.0-ac59490325-e190db5153.zip/node_modules/recoil/",\
+          "packageDependencies": [\
+            ["recoil", "virtual:bcccfbc3736221125a9ec5ea8038c3024d2c5e5c85bcc354af7db3965dc0db3eff548b6eb0f3594f3becb64e74eb1f7e8eda79bcf9a52e7a6a35e9ed22be44ee#npm:0.7.0"],\
+            ["@types/react", "npm:17.0.38"],\
+            ["@types/react-dom", "npm:17.0.11"],\
+            ["@types/react-native", null],\
+            ["hamt_plus", "npm:1.0.2"],\
+            ["react", "npm:17.0.2"],\
+            ["react-dom", "virtual:bcccfbc3736221125a9ec5ea8038c3024d2c5e5c85bcc354af7db3965dc0db3eff548b6eb0f3594f3becb64e74eb1f7e8eda79bcf9a52e7a6a35e9ed22be44ee#npm:17.0.2"],\
+            ["react-native", null]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react-native",\
+            "@types/react",\
+            "react-dom",\
+            "react-native",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\

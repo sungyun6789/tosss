@@ -914,6 +914,7 @@ __metadata:
     prettier: ^2.5.1
     react: ^17.0.2
     react-dom: ^17.0.2
+    recoil: ^0.7.0
     typescript: ^4.5.5
   languageName: unknown
   linkType: soft
@@ -1865,6 +1866,13 @@ __metadata:
     merge2: ^1.4.1
     slash: ^3.0.0
   checksum: b4be8885e0cfa018fc783792942d53926c35c50b3aefd3fdcfb9d22c627639dc26bd2327a40a0b74b074100ce95bb7187bfeae2f236856aa3de183af7a02aea6
+  languageName: node
+  linkType: hard
+
+"hamt_plus@npm:1.0.2":
+  version: 1.0.2
+  resolution: "hamt_plus@npm:1.0.2"
+  checksum: af26ea32db03009019cc83dfa9411521a2fa16079443de1a502c9be46d8b3c975acda8ed93fc5750ef08d3186d35901e2d8cfe717dd54bea67b358601fa74e4c
   languageName: node
   linkType: hard
 
@@ -2884,6 +2892,22 @@ __metadata:
     string_decoder: ^1.1.1
     util-deprecate: ^1.0.1
   checksum: d4ea81502d3799439bb955a3a5d1d808592cf3133350ed352aeaa499647858b27b1c4013984900238b0873ec8d0d8defce72469fb7a83e61d53f5ad61cb80dc8
+  languageName: node
+  linkType: hard
+
+"recoil@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "recoil@npm:0.7.0"
+  dependencies:
+    hamt_plus: 1.0.2
+  peerDependencies:
+    react: ">=16.13.1"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: e190db5153e322ba8ca824e97701e756c41681080da23f3e87d104544da2e8c9eea44ada8a36857ef9a1ade368dfe6ea3af7d51796441b08c40272c0a1386c81
   languageName: node
   linkType: hard
 
