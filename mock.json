@@ -1,26 +1,30 @@
 [
   {
     "wallet_name": "토스뱅크",
-    "bank_name": "toss",
+    "bank_name": "토스뱅크",
     "balance": "106,591원",
-    "transfer": "true"
+    "transfer": "true",
+    "address": "0000-0000-0000-0000"
   },
   {
     "wallet_name": "보통예금",
-    "bank_name": "nh",
+    "bank_name": "NH농협은행",
     "balance": "5,491원",
-    "transfer": "true"
+    "transfer": "true",
+    "address": "1111-1111-1111-1111"
   },
   {
     "wallet_name": "주택청약종합저축",
-    "bank_name": "nh",
+    "bank_name": "NH농협은행",
     "balance": "300,000원",
-    "transfer": "false"
+    "transfer": "false",
+    "address": "2222-2222-2222-2222"
   },
   {
     "wallet_name": "대출",
-    "bank_name": "nh",
+    "bank_name": "NH농협은행",
     "balance": "100,000,000원",
-    "transfer": "false"
+    "transfer": "false",
+    "address": "3333-3333-3333-3333"
   }
 ]
