@@ -1,6 +1,7 @@
-import { useRouter } from 'next/router';
+import { AssetsInfoState } from 'atoms';
 
-import mock from '../../mock.json';
+import { useRouter } from 'next/router';
+import { useRecoilValue } from 'recoil';
 
 import { AssetsHeader, AssetsInfoSection } from './AssetsPage.style';
 
@@ -8,7 +9,9 @@ const AssetsPage = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  const data = id ? mock.filter((data) => data.wallet_name === id[1])[0] : undefined;
+  const assetsInfo = useRecoilValue(AssetsInfoState);
+
+  const data = id ? assetsInfo.filter(({ wallet_name }) => wallet_name === id[1])[0] : undefined;
 
   return (
     <>
