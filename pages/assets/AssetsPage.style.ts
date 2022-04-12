@@ -17,6 +17,8 @@ export const AssetsInfoSection = styled.section`
 
     color: gray;
     text-decoration: underline;
+
+    cursor: pointer;
   }
   p {
     display: flex;
