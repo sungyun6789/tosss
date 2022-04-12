@@ -1,3 +1,4 @@
+import DWButton from '@components/button/DWButton';
 import { AssetsInfoState } from 'atoms';
 import copy from 'utils/copy';
 
@@ -21,6 +22,7 @@ const AssetsPage = () => {
         <span onClick={() => copy(data.address)}>{data.address}</span>
         <p className="balance">{data.balance}</p>
       </AssetsInfoSection>
+      {data.transfer ? <DWButton /> : null}
     </>
   ) : null;
 };
