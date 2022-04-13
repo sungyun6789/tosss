@@ -20,9 +20,11 @@ const AssetsPage = () => {
       <AssetsHeader>{`${data.bank_name} ${data.wallet_name}`}</AssetsHeader>
       <AssetsInfoSection>
         <span onClick={() => copy(data.address)}>{data.address}</span>
-        <p className="balance">{data.balance}</p>
+        <article>
+          <div className="transfer">{data.transfer ? <DWButton /> : null}</div>
+          <div className="balance">{data.balance}</div>
+        </article>
       </AssetsInfoSection>
-      {data.transfer ? <DWButton /> : null}
     </>
   ) : null;
 };

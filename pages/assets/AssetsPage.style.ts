@@ -11,6 +11,13 @@ export const AssetsInfoSection = styled.section`
   width: 1000px;
   margin: auto;
 
+  article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
   span {
     display: flex;
     justify-content: flex-end;
@@ -20,11 +27,8 @@ export const AssetsInfoSection = styled.section`
 
     cursor: pointer;
   }
-  p {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 30px;
 
+  .balance {
     font-size: 30px;
   }
 `;
