@@ -22,7 +22,7 @@ const AssetsPage = () => {
         <span onClick={() => copy(data.address)}>{data.address}</span>
         <article>
           <div className="transfer">{data.transfer ? <DWButton /> : null}</div>
-          <div className="balance">{data.balance}</div>
+          <div className="balance">{data.balance}원</div>
         </article>
       </AssetsInfoSection>
     </>

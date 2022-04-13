@@ -19,7 +19,7 @@ const Assets = () => {
               <p className="logo">Bank Image</p>
               <li className="name">{wallet_name}</li>
             </div>
-            <li className="balance">{balance}</li>
+            <li className="balance">{balance}원</li>
           </article>
         ))}
       </AssetsUL>
