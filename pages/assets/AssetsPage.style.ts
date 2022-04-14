@@ -11,13 +11,6 @@ export const AssetsInfoSection = styled.section`
   width: 1000px;
   margin: auto;
 
-  article {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 30px;
-  }
-
   span {
     display: flex;
     justify-content: flex-end;
@@ -28,7 +21,25 @@ export const AssetsInfoSection = styled.section`
     cursor: pointer;
   }
 
-  .balance {
-    font-size: 30px;
+  article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    div {
+      flex: 1;
+    }
+
+    .transfer {
+      display: flex;
+      justify-content: center;
+    }
+
+    .balance {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 30px;
+    }
   }
 `;
