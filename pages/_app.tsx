@@ -4,7 +4,6 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { RecoilRoot } from 'recoil';
 
-import favicon from '../public/favicon.ico';
 import GlobalStyle from '../styles/global.style';
 
 const app = ({ Component, pageProps }: AppProps) => (
@@ -13,7 +12,7 @@ const app = ({ Component, pageProps }: AppProps) => (
       <GlobalStyle />
       <Head>
         <title>Tosss</title>
-        <link rel="icon" href={favicon.src} />
+        <link rel="shortcut icon" href="https://static.toss.im/tds/favicon/favicon.ico" />
       </Head>
       <Component {...pageProps} />
     </Layout>
