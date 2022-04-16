@@ -11,12 +11,11 @@ import { AssetsHeader, AssetsInfoSection } from './AssetsPage.style';
 
 const AssetsPage = () => {
   const [price, setPrice] = useState(0);
+  const [assets, setAssets] = useRecoilState(assetsState);
   const router = useRouter();
   const id = router.query.id?.[1];
 
   if (!id) return null;
-
-  const [assets, setAssets] = useRecoilState(assetsState);
 
   const matchData = assets.filter(({ wallet_name }) => wallet_name === id)[0];
   const notMatchData = assets.filter(({ wallet_name }) => wallet_name !== id);
