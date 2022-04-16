@@ -10,15 +10,15 @@ export interface AssetsModel {
   address: string;
 }
 
-export const AssetsInfoState = atom<AssetsModel[]>({
-  key: 'initialAssetsValue',
+export const assetsState = atom<AssetsModel[]>({
+  key: 'assets',
   default: mock,
 });
 
 export const assetsSelector = selector<AssetsModel[]>({
-  key: 'sortedAsstesValue',
+  key: 'assetsSelector',
   get: ({ get }) => {
-    const data = get(AssetsInfoState);
+    const data = get(assetsState);
     return (JSON.parse(JSON.stringify(data)) as AssetsModel[]).sort((lhs, rhs) =>
       lhs.wallet_name.localeCompare(rhs.wallet_name),
     );

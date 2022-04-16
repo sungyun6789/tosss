@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import DWButton from '@components/button/DWButton';
-import { AssetsInfoState } from 'atoms';
+import { assetsState } from 'atoms';
 import copy from 'utils/copy';
 
 import { useRouter } from 'next/router';
@@ -16,7 +16,7 @@ const AssetsPage = () => {
 
   if (!id) return null;
 
-  const [assets, setAssets] = useRecoilState(AssetsInfoState);
+  const [assets, setAssets] = useRecoilState(assetsState);
   const data = assets.filter(({ wallet_name }) => wallet_name === id)[0];
 
   if (!data || !id) return null;
