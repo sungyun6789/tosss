@@ -17,38 +17,41 @@ const AssetsPage = () => {
   if (!id) return null;
 
   const [assets, setAssets] = useRecoilState(assetsState);
-  const data = assets.filter(({ wallet_name }) => wallet_name === id)[0];
 
-  if (!data || !id) return null;
+  const matchData = assets.filter(({ wallet_name }) => wallet_name === id)[0];
+  const notMatchData = assets.filter(({ wallet_name }) => wallet_name !== id);
+  const optionData = notMatchData.filter(({ transfer }) => transfer === true);
+
+  if (!matchData || !id) return null;
 
   const deposit = () => {
-    setAssets([
-      ...assets.filter(({ wallet_name }) => wallet_name !== id),
-      { ...data, balance: (data.balance ?? 0) + price },
-    ]);
+    setAssets([...notMatchData, { ...matchData, balance: (matchData.balance ?? 0) + price }]);
   };
 
   const withdrawal = () => {
-    setAssets([
-      ...assets.filter(({ wallet_name }) => wallet_name !== id),
-      { ...data, balance: (data.balance ?? 0) - price },
-    ]);
+    setAssets([...notMatchData, { ...matchData, balance: (matchData.balance ?? 0) - price }]);
   };
 
   return (
     <>
-      <AssetsHeader>{`${data.bank_name} ${data.wallet_name}`}</AssetsHeader>
+      <AssetsHeader>{`${matchData.bank_name} ${matchData.wallet_name}`}</AssetsHeader>
       <AssetsInfoSection>
-        <span onClick={() => copy(data.address)}>{data.address}</span>
+        <span onClick={() => copy(matchData.address)}>{matchData.address}</span>
         <article>
           <div />
           <div className="transfer">
-            {data.transfer ? <DWButton deposit={deposit} withdrawal={withdrawal} /> : null}
+            {matchData.transfer ? <DWButton deposit={deposit} withdrawal={withdrawal} /> : null}
           </div>
-          <div className="balance">{data.balance.toLocaleString('ko-KR')}원</div>
+          <div className="balance">{matchData.balance.toLocaleString('ko-KR')}원</div>
         </article>
       </AssetsInfoSection>
+
       <input type="number" onChange={(e) => setPrice(+e.target.value)} />
+      <select>
+        {optionData.map(({ wallet_name }) => (
+          <option key={wallet_name}>{wallet_name}</option>
+        ))}
+      </select>
     </>
   );
 };
