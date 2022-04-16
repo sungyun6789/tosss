@@ -1,32 +1,56 @@
+import { useState } from 'react';
+
 import DWButton from '@components/button/DWButton';
 import { AssetsInfoState } from 'atoms';
 import copy from 'utils/copy';
 
 import { useRouter } from 'next/router';
-import { useRecoilValue } from 'recoil';
+import { useRecoilState } from 'recoil';
 
 import { AssetsHeader, AssetsInfoSection } from './AssetsPage.style';
 
 const AssetsPage = () => {
+  const [price, setPrice] = useState(0);
   const router = useRouter();
-  const { id } = router.query;
+  const id = router.query.id?.[1];
 
-  const assetsInfo = useRecoilValue(AssetsInfoState);
+  if (!id) return null;
 
-  const data = id ? assetsInfo.filter(({ wallet_name }) => wallet_name === id[1])[0] : undefined;
+  const [assets, setAssets] = useRecoilState(AssetsInfoState);
+  const data = assets.filter(({ wallet_name }) => wallet_name === id)[0];
 
-  return data ? (
+  if (!data || !id) return null;
+
+  const deposit = () => {
+    setAssets([
+      ...assets.filter(({ wallet_name }) => wallet_name !== id),
+      { ...data, balance: (data.balance ?? 0) + price },
+    ]);
+  };
+
+  const withdrawal = () => {
+    setAssets([
+      ...assets.filter(({ wallet_name }) => wallet_name !== id),
+      { ...data, balance: (data.balance ?? 0) - price },
+    ]);
+  };
+
+  return (
     <>
       <AssetsHeader>{`${data.bank_name} ${data.wallet_name}`}</AssetsHeader>
       <AssetsInfoSection>
         <span onClick={() => copy(data.address)}>{data.address}</span>
         <article>
-          <div className="transfer">{data.transfer ? <DWButton /> : null}</div>
+          <div />
+          <div className="transfer">
+            {data.transfer ? <DWButton deposit={deposit} withdrawal={withdrawal} /> : null}
+          </div>
           <div className="balance">{data.balance}원</div>
         </article>
       </AssetsInfoSection>
+      <input type="number" onChange={(e) => setPrice(+e.target.value)} />
     </>
-  ) : null;
+  );
 };
 
 export default AssetsPage;
