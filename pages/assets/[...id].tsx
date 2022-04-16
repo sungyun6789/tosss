@@ -45,7 +45,7 @@ const AssetsPage = () => {
           <div className="transfer">
             {data.transfer ? <DWButton deposit={deposit} withdrawal={withdrawal} /> : null}
           </div>
-          <div className="balance">{data.balance}원</div>
+          <div className="balance">{data.balance.toLocaleString('ko-KR')}원</div>
         </article>
       </AssetsInfoSection>
       <input type="number" onChange={(e) => setPrice(+e.target.value)} />
