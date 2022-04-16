@@ -14,6 +14,7 @@ export const NavWrapper = styled.section`
 
 export const Nav = styled.nav`
   display: flex;
+  align-items: center;
   max-width: 1140px;
   height: 100%;
   margin: auto;
@@ -36,10 +37,4 @@ export const Nav = styled.nav`
       }
     }
   }
-`;
-
-export const Logo = styled.div`
-  display: flex;
-  align-items: center;
-  margin-right: 24px;
 `;

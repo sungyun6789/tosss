@@ -1,17 +1,20 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
-import { Logo, Nav, NavWrapper } from './Header.style';
+import logo from '../../public/logo-toss-blue.png';
+
+import { Nav, NavWrapper } from './Header.style';
 
 const Header = () => {
   return (
     <header>
       <NavWrapper>
         <Nav>
-          <Logo>
-            <Link href="/">
-              <a>LOGO</a>
-            </Link>
-          </Logo>
+          <Link href="/">
+            <a>
+              <Image src={logo} width={100} height={55} />
+            </a>
+          </Link>
 
           <article>
             <div>
