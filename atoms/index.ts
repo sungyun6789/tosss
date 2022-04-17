@@ -6,7 +6,7 @@ export interface AssetsModel {
   wallet_name: string;
   bank_name: string;
   balance: number;
-  transfer: boolean;
+  isTransfer: boolean;
   address: string;
 }
 

@@ -3,28 +3,28 @@
     "wallet_name": "토스뱅크",
     "bank_name": "토스뱅크",
     "balance": 106591,
-    "transfer": true,
+    "isTransfer": true,
     "address": "0000-0000-0000-0000"
   },
   {
     "wallet_name": "보통예금",
     "bank_name": "NH농협은행",
     "balance": 5491,
-    "transfer": true,
+    "isTransfer": true,
     "address": "1111-1111-1111-1111"
   },
   {
     "wallet_name": "주택청약종합저축",
     "bank_name": "NH농협은행",
     "balance": 300000,
-    "transfer": false,
+    "isTransfer": false,
     "address": "2222-2222-2222-2222"
   },
   {
     "wallet_name": "대출",
     "bank_name": "NH농협은행",
     "balance": 100000000,
-    "transfer": false,
+    "isTransfer": false,
     "address": "3333-3333-3333-3333"
   }
 ]

@@ -19,7 +19,7 @@ const AssetsPage = () => {
 
   const matchData = assets.filter(({ wallet_name }) => wallet_name === id)[0];
   const notMatchData = assets.filter(({ wallet_name }) => wallet_name !== id);
-  const optionData = notMatchData.filter(({ transfer }) => transfer === true);
+  const optionData = notMatchData.filter(({ isTransfer }) => isTransfer === true);
 
   if (!matchData || !id) return null;
 
@@ -38,8 +38,8 @@ const AssetsPage = () => {
         <span onClick={() => copy(matchData.address)}>{matchData.address}</span>
         <article>
           <div />
-          <div className="transfer">
-            {matchData.transfer ? <DWButton deposit={deposit} withdrawal={withdrawal} /> : null}
+          <div className="isTransfer">
+            {matchData.isTransfer ? <DWButton deposit={deposit} withdrawal={withdrawal} /> : null}
           </div>
           <div className="balance">{matchData.balance.toLocaleString('ko-KR')}원</div>
         </article>

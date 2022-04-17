@@ -31,7 +31,7 @@ export const AssetsInfoSection = styled.section`
       flex: 1;
     }
 
-    .transfer {
+    .isTransfer {
       display: flex;
       justify-content: center;
     }
