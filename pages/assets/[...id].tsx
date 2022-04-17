@@ -2,12 +2,12 @@ import { assetsState } from 'atoms';
 import copy from 'utils/copy';
 
 import { useRouter } from 'next/router';
-import { useRecoilState } from 'recoil';
+import { useRecoilValue } from 'recoil';
 
 import { AssetsHeader, AssetsInfoSection } from './AssetsPage.style';
 
 const AssetsPage = () => {
-  const [assets, setAssets] = useRecoilState(assetsState);
+  const assets = useRecoilValue(assetsState);
   const router = useRouter();
   const id = router.query.id?.[1];
 
