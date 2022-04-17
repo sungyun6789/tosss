@@ -10,14 +10,12 @@ interface Props {
 const BankSelector = ({ transferAssets, setSelect }: Props) => {
   return (
     <BankSelectorWrapper>
-      <select onChange={(e) => setSelect(e.target.value)}>
-        <option value="">계좌를 선택하세요.</option>
-        {transferAssets.map(({ wallet_name }) => (
-          <option key={wallet_name} value={wallet_name}>
-            {wallet_name}
-          </option>
-        ))}
-      </select>
+      {transferAssets.map(({ wallet_name, balance }) => (
+        <div key={wallet_name} onClick={() => setSelect(wallet_name)}>
+          <div>{wallet_name}</div>
+          <div>{balance.toLocaleString('ko-KR')}</div>
+        </div>
+      ))}
     </BankSelectorWrapper>
   );
 };

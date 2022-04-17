@@ -6,7 +6,7 @@ import { transferAssetsSelector } from 'atoms';
 
 import { useRecoilValue } from 'recoil';
 
-import { TransferPageWrapper } from './TransferPage.style';
+import { TransferPageSelectorWrapper, TransferPageWrapper } from './TransferPage.style';
 
 const TransferPage = () => {
   const [depositSelect, setDepositSelect] = useState<string>();
@@ -21,8 +21,10 @@ const TransferPage = () => {
       <div>
         <DWButton deposit={deposit} withdrawal={withdrawal} />
       </div>
-      <BankSelector transferAssets={transferAssets} setSelect={setDepositSelect} />
-      <BankSelector transferAssets={transferAssets} setSelect={setWithdrawalSelect} />
+      <TransferPageSelectorWrapper>
+        <BankSelector transferAssets={transferAssets} setSelect={setDepositSelect} />
+        <BankSelector transferAssets={transferAssets} setSelect={setWithdrawalSelect} />
+      </TransferPageSelectorWrapper>
     </TransferPageWrapper>
   );
 };
