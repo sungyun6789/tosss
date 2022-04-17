@@ -14,20 +14,25 @@ export const DWButtonWrapper = styled.section`
     border: none;
     border-radius: 10px;
     transition: 0.3s;
-    cursor: pointer;
   }
+`;
 
-  .deposit {
+export const DepositButton = styled.button`
+  :not(:disabled) {
     color: #2196f3;
     background-color: #e3f2fd;
+    cursor: pointer;
     :hover {
       background-color: #bbdefb;
     }
   }
+`;
 
-  .withdrawal {
+export const WithdrawalButton = styled.button`
+  :not(:disabled) {
     color: white;
     background-color: #2196f3;
+    cursor: pointer;
     :hover {
       background-color: #1565c0;
     }

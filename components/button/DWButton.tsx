@@ -1,20 +1,21 @@
-import { DWButtonWrapper } from './DWButton.style';
+import { DepositButton, DWButtonWrapper, WithdrawalButton } from './DWButton.style';
 
 interface Props {
   deposit: () => void;
   withdrawal: () => void;
+  disabled?: boolean;
 }
 
 /** Deposit Withdrawal */
-const DWButton = ({ deposit, withdrawal }: Props) => {
+const DWButton = ({ deposit, withdrawal, disabled = false }: Props) => {
   return (
     <DWButtonWrapper>
-      <button className="deposit" onClick={deposit}>
+      <DepositButton onClick={deposit} disabled={disabled}>
         채우기
-      </button>
-      <button className="withdrawal" onClick={withdrawal}>
+      </DepositButton>
+      <WithdrawalButton onClick={withdrawal} disabled={disabled}>
         보내기
-      </button>
+      </WithdrawalButton>
     </DWButtonWrapper>
   );
 };

@@ -11,8 +11,11 @@ export const BankSelectorWrapper = styled.section`
     height: 50px;
     cursor: pointer;
     :hover {
-      background-color: #fafafa;
-      border-radius: 15px;
+      background-color: #f0f0f0;
     }
+  }
+
+  .match {
+    background-color: #f0f0f0;
   }
 `;

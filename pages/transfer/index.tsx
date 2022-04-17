@@ -22,8 +22,8 @@ const TransferPage = () => {
         <DWButton deposit={deposit} withdrawal={withdrawal} />
       </div>
       <TransferPageSelectorWrapper>
-        <BankSelector transferAssets={transferAssets} setSelect={setDepositSelect} />
-        <BankSelector transferAssets={transferAssets} setSelect={setWithdrawalSelect} />
+        <BankSelector transferAssets={transferAssets} select={depositSelect} setSelect={setDepositSelect} />
+        <BankSelector transferAssets={transferAssets} select={withdrawalSelect} setSelect={setWithdrawalSelect} />
       </TransferPageSelectorWrapper>
     </TransferPageWrapper>
   );
