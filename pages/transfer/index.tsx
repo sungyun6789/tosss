@@ -1,4 +1,5 @@
 import DWButton from '@components/button/DWButton';
+import BankSelector from '@components/select/BankSelector';
 
 import { TransferPageWrapper } from './TransferPage.style';
 
@@ -8,6 +9,7 @@ const TransferPage = () => {
 
   return (
     <TransferPageWrapper>
+      <BankSelector />
       <div>
         <DWButton deposit={deposit} withdrawal={withdrawal} />
       </div>
