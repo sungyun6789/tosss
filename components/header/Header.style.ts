@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 export const NavWrapper = styled.section`
   width: 100%;
   height: 60px;
+  margin-bottom: 60px;
 
   a {
     color: #4e5968;
