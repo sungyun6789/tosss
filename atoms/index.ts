@@ -24,3 +24,11 @@ export const assetsSelector = selector<AssetsModel[]>({
     );
   },
 });
+
+export const transferAssetsSelector = selector<AssetsModel[]>({
+  key: 'transferAssetsSelector',
+  get: ({ get }) => {
+    const data = get(assetsState);
+    return data.filter(({ isTransfer }) => isTransfer === true);
+  },
+});
