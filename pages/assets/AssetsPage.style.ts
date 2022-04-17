@@ -21,25 +21,10 @@ export const AssetsInfoSection = styled.section`
     cursor: pointer;
   }
 
-  article {
+  div {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-top: 30px;
-
-    div {
-      flex: 1;
-    }
-
-    .isTransfer {
-      display: flex;
-      justify-content: center;
-    }
-
-    .balance {
-      display: flex;
-      justify-content: flex-end;
-      font-size: 30px;
-    }
+    font-size: 30px;
   }
 `;
