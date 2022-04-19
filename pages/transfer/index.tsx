@@ -19,7 +19,7 @@ const TransferPage = () => {
   return (
     <TransferPageWrapper>
       <div>
-        <DWButton deposit={deposit} withdrawal={withdrawal} />
+        <DWButton deposit={deposit} />
       </div>
       <TransferPageSelectorWrapper>
         <BankSelector transferAssets={transferAssets} select={depositSelect} setSelect={setDepositSelect} />

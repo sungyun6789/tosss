@@ -2,12 +2,12 @@ import styled from '@emotion/styled';
 
 export const DWButtonWrapper = styled.section`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 260px;
 
   button {
     height: 40px;
-    width: 120px;
+    width: 140px;
 
     font-size: 14px;
     font-weight: 500;
@@ -18,17 +18,6 @@ export const DWButtonWrapper = styled.section`
 `;
 
 export const DepositButton = styled.button`
-  :not(:disabled) {
-    color: #2196f3;
-    background-color: #e3f2fd;
-    cursor: pointer;
-    :hover {
-      background-color: #bbdefb;
-    }
-  }
-`;
-
-export const WithdrawalButton = styled.button`
   :not(:disabled) {
     color: white;
     background-color: #2196f3;
