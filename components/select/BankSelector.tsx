@@ -1,4 +1,4 @@
-import { AssetsModel } from 'atoms';
+import type { AssetsModel } from 'atoms';
 
 import { BankSelectorWrapper } from './BankSelector.style';
 

@@ -1,6 +1,6 @@
 import Layout from '@components/layout/Layout';
 
-import { AppProps } from 'next/app';
+import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { RecoilRoot } from 'recoil';
 
