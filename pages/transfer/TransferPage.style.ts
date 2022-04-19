@@ -9,8 +9,3 @@ export const TransferPageWrapper = styled.section`
     justify-content: center;
   }
 `;
-
-export const TransferPageSelectorWrapper = styled.article`
-  display: flex;
-  justify-content: space-evenly;
-`;

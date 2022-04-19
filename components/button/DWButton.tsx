@@ -11,7 +11,7 @@ const DWButton = ({ deposit, disabled = false }: Props) => {
   return (
     <DWButtonWrapper>
       <DepositButton onClick={deposit} disabled={disabled}>
-        송금
+        보내기
       </DepositButton>
     </DWButtonWrapper>
   );

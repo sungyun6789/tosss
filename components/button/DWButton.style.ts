@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const DWButtonWrapper = styled.section`
   display: flex;
   justify-content: center;
-  width: 260px;
+  width: 300px;
 
   button {
     height: 40px;
@@ -14,6 +14,8 @@ export const DWButtonWrapper = styled.section`
     border: none;
     border-radius: 10px;
     transition: 0.3s;
+
+    margin-top: 20px;
   }
 `;
 
