@@ -2,9 +2,9 @@ import { useState } from 'react';
 
 import DWButton from '@components/button/DWButton';
 import BankSelector from '@components/select/BankSelector';
-import { transferAssetsSelector } from 'atoms';
+import { assetsState } from 'atoms';
 
-import { useRecoilValue } from 'recoil';
+import { useRecoilState } from 'recoil';
 
 import { TransferPageWrapper } from './TransferPage.style';
 
@@ -12,9 +12,21 @@ const TransferPage = () => {
   const [depositSelect, setDepositSelect] = useState<string>();
   const [withdrawalSelect, setWithdrawalSelect] = useState<string>();
   const [price, setPrice] = useState<number>();
-  const transferAssets = useRecoilValue(transferAssetsSelector);
+  const [assets, setAssets] = useRecoilState(assetsState);
+  const transferAssets = assets.filter(({ isTransfer }) => isTransfer === true);
 
-  const deposit = () => undefined;
+  const deposit = () => {
+    if (price) {
+      /** 보내기 */
+      console.log(transferAssets.find(({ wallet_name }) => wallet_name === depositSelect)!.balance - price);
+
+      /** 받기 */
+      console.log(transferAssets.find(({ wallet_name }) => wallet_name === withdrawalSelect)!.balance + price);
+
+      /** 초기화 */
+      setPrice(undefined);
+    }
+  };
 
   return (
     <TransferPageWrapper>
