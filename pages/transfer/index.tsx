@@ -11,6 +11,7 @@ import { TransferPageWrapper } from './TransferPage.style';
 const TransferPage = () => {
   const [depositSelect, setDepositSelect] = useState<string>();
   const [withdrawalSelect, setWithdrawalSelect] = useState<string>();
+  const [price, setPrice] = useState<number>();
   const transferAssets = useRecoilValue(transferAssetsSelector);
 
   const deposit = () => undefined;
@@ -22,6 +23,10 @@ const TransferPage = () => {
       </div>
       <div>
         <BankSelector transferAssets={transferAssets} select={withdrawalSelect} setSelect={setWithdrawalSelect} />
+      </div>
+
+      <div>
+        <input placeholder="금액 입력" type="number" value={price ?? ''} onChange={(e) => setPrice(+e.target.value)} />
       </div>
 
       <div>
