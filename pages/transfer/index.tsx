@@ -16,26 +16,24 @@ const TransferPage = () => {
   const transferAssets = assets.filter(({ isTransfer }) => isTransfer === true);
 
   const deposit = () => {
-    if (price) {
-      const depositIndex = transferAssets.findIndex(({ wallet_name }) => wallet_name === depositSelect);
-      const withdrawalIndex = transferAssets.findIndex(({ wallet_name }) => wallet_name === withdrawalSelect);
+    const depositIndex = transferAssets.findIndex(({ wallet_name }) => wallet_name === depositSelect);
+    const withdrawalIndex = transferAssets.findIndex(({ wallet_name }) => wallet_name === withdrawalSelect);
 
-      /** 송금 */
-      setAssets(
-        Object.entries(assets).map(([key, value]) =>
-          +key === depositIndex
-            ? { ...value, balance: value.balance - price }
-            : value || +key === withdrawalIndex
-            ? { ...value, balance: value.balance + price }
-            : value,
-        ),
-      );
+    /** 송금 */
+    setAssets(
+      Object.entries(assets).map(([key, value]) =>
+        +key === depositIndex
+          ? { ...value, balance: value.balance - price! }
+          : value || +key === withdrawalIndex
+          ? { ...value, balance: value.balance + price! }
+          : value,
+      ),
+    );
 
-      /** 초기화 */
-      setPrice(undefined);
-      setDepositSelect(undefined);
-      setWithdrawalSelect(undefined);
-    }
+    /** 초기화 */
+    setPrice(undefined);
+    setDepositSelect(undefined);
+    setWithdrawalSelect(undefined);
   };
 
   return (
@@ -52,7 +50,10 @@ const TransferPage = () => {
       </div>
 
       <div>
-        <DWButton deposit={deposit} disabled={depositSelect === undefined || withdrawalSelect === undefined} />
+        <DWButton
+          deposit={deposit}
+          disabled={depositSelect === undefined || withdrawalSelect === undefined || !price}
+        />
       </div>
     </TransferPageWrapper>
   );
