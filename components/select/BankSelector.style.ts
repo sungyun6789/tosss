@@ -12,10 +12,6 @@ export const BankSelectorWrapper = styled.section`
     width: 100%;
     height: 50px;
     cursor: pointer;
-    :hover {
-      background-color: #f0f0f0;
-    }
-
     div {
       width: 50%;
     }
