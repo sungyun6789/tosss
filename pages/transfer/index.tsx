@@ -21,13 +21,15 @@ const TransferPage = () => {
 
     /** 송금 */
     setAssets(
-      Object.entries(assets).map(([key, value]) =>
-        +key === depositIndex
-          ? { ...value, balance: value.balance - price! }
-          : value || +key === withdrawalIndex
-          ? { ...value, balance: value.balance + price! }
-          : value,
-      ),
+      Object.entries(assets).map(([key, value]) => {
+        if (+key === depositIndex) {
+          return { ...value, balance: value.balance - price! };
+        } else if (+key === withdrawalIndex) {
+          return { ...value, balance: value.balance + price! };
+        } else {
+          return value;
+        }
+      }),
     );
 
     /** 초기화 */
