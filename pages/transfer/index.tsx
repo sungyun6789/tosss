@@ -17,14 +17,26 @@ const TransferPage = () => {
 
   const deposit = () => {
     if (price) {
-      /** 보내기 */
-      console.log(transferAssets.find(({ wallet_name }) => wallet_name === depositSelect)!.balance - price);
+      // 보내기
+      const depositIndex = transferAssets.findIndex(({ wallet_name }) => wallet_name === depositSelect);
+      setAssets(
+        Object.entries(assets).map(([key, value]) =>
+          +key === depositIndex ? { ...value, balance: value.balance - price } : value,
+        ),
+      );
 
-      /** 받기 */
-      console.log(transferAssets.find(({ wallet_name }) => wallet_name === withdrawalSelect)!.balance + price);
+      // 받기
+      const withdrawalIndex = transferAssets.findIndex(({ wallet_name }) => wallet_name === withdrawalSelect);
+      setAssets(
+        Object.entries(assets).map(([key, value]) =>
+          +key === withdrawalIndex ? { ...value, balance: value.balance + price } : value,
+        ),
+      );
 
       /** 초기화 */
       setPrice(undefined);
+      setDepositSelect(undefined);
+      setWithdrawalSelect(undefined);
     }
   };
 
@@ -42,7 +54,7 @@ const TransferPage = () => {
       </div>
 
       <div>
-        <DWButton deposit={deposit} />
+        <DWButton deposit={deposit} disabled={depositSelect === undefined || withdrawalSelect === undefined} />
       </div>
     </TransferPageWrapper>
   );
