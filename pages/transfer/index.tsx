@@ -17,19 +17,17 @@ const TransferPage = () => {
 
   const deposit = () => {
     if (price) {
-      // 보내기
       const depositIndex = transferAssets.findIndex(({ wallet_name }) => wallet_name === depositSelect);
-      setAssets(
-        Object.entries(assets).map(([key, value]) =>
-          +key === depositIndex ? { ...value, balance: value.balance - price } : value,
-        ),
-      );
-
-      // 받기
       const withdrawalIndex = transferAssets.findIndex(({ wallet_name }) => wallet_name === withdrawalSelect);
+
+      /** 송금 */
       setAssets(
         Object.entries(assets).map(([key, value]) =>
-          +key === withdrawalIndex ? { ...value, balance: value.balance + price } : value,
+          +key === depositIndex
+            ? { ...value, balance: value.balance - price }
+            : value || +key === withdrawalIndex
+            ? { ...value, balance: value.balance + price }
+            : value,
         ),
       );
 
