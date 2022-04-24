@@ -1,8 +1,9 @@
 import { atom, selector } from 'recoil';
 
-import mock from '../mock.json';
+import mock from '../mock';
 
 export interface AssetsModel {
+  id: number;
   wallet_name: string;
   bank_name: string;
   balance: number;
