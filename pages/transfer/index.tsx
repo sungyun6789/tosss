@@ -16,7 +16,7 @@ const TransferPage = () => {
   const transferAssets = assets.filter(({ isTransfer }) => isTransfer === true);
 
   const deposit = () => {
-    if (depositSelect === withdrawalSelect) return alert('같은 계좌입니다.');
+    if (depositSelect === withdrawalSelect) return alert('같은 계좌로는 보낼 수 없습니다.');
 
     const depositIndex = transferAssets.findIndex(({ wallet_name }) => wallet_name === depositSelect);
     const withdrawalIndex = transferAssets.findIndex(({ wallet_name }) => wallet_name === withdrawalSelect);
@@ -33,7 +33,7 @@ const TransferPage = () => {
         }
       }),
     );
-
+    alert('보내기에 성공했습니다!');
     /** 초기화 */
     setPrice(undefined);
     setDepositSelect(undefined);
