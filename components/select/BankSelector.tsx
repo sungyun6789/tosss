@@ -16,6 +16,7 @@ interface Props {
 
 const BankSelector = ({ transferAssets, select, setSelect }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
+  const data = transferAssets.find((v) => v.wallet_name === select);
 
   return (
     <AnimateSharedLayout>
@@ -31,14 +32,19 @@ const BankSelector = ({ transferAssets, select, setSelect }: Props) => {
                       onClick={() => setSelect(wallet_name)}
                     >
                       <div>{wallet_name}</div>
-                      <div>{balance.toLocaleString('ko-KR')}</div>
+                      <div>{balance.toLocaleString('ko-KR')}원</div>
                     </article>
                   </Mdiv>
                 </AnimatePresence>
               </Mli>
             ))
+          ) : data ? (
+            <article>
+              <div>{data.wallet_name}</div>
+              <div>{data.balance.toLocaleString('ko-KR')}원</div>
+            </article>
           ) : (
-            <article>{select ?? '은행을 선택해주세요.'}</article>
+            <article>은행을 선택해주세요.</article>
           )}
         </Mui>
       </BankSelectorWrapper>
