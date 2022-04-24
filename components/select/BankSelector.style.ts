@@ -37,7 +37,7 @@ export const BankSelectorWrapper = styled.section<BankSelectorModel>`
   }
 
   li {
-    background-color: rgba(214, 214, 214, 0.5);
+    border: 1px solid #f0f0f0;
     border-radius: 10px;
     margin-bottom: 20px;
     overflow: hidden;
