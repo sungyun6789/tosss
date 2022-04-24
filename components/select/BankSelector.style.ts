@@ -20,4 +20,29 @@ export const BankSelectorWrapper = styled.section`
   .match {
     background-color: #f0f0f0;
   }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 25px;
+  }
+
+  li {
+    background-color: rgba(214, 214, 214, 0.5);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  li:last-child {
+    margin-bottom: 0px;
+  }
 `;
