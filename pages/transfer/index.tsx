@@ -16,6 +16,8 @@ const TransferPage = () => {
   const transferAssets = assets.filter(({ isTransfer }) => isTransfer === true);
 
   const deposit = () => {
+    if (depositSelect === withdrawalSelect) return alert('같은 계좌입니다.');
+
     const depositIndex = transferAssets.findIndex(({ wallet_name }) => wallet_name === depositSelect);
     const withdrawalIndex = transferAssets.findIndex(({ wallet_name }) => wallet_name === withdrawalSelect);
 
@@ -46,11 +48,9 @@ const TransferPage = () => {
       <div>
         <BankSelector transferAssets={transferAssets} select={withdrawalSelect} setSelect={setWithdrawalSelect} />
       </div>
-
       <div>
         <input placeholder="금액 입력" type="number" value={price ?? ''} onChange={(e) => setPrice(+e.target.value)} />
       </div>
-
       <div>
         <DWButton
           deposit={deposit}
