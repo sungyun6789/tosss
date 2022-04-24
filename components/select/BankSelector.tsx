@@ -17,7 +17,7 @@ const BankSelector = ({ transferAssets, select, setSelect }: Props) => {
 
   return (
     <AnimateSharedLayout>
-      <BankSelectorWrapper>
+      <BankSelectorWrapper isOpen={isOpen}>
         <motion.ul layout initial={{ borderRadius: 25 }} onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? (
             transferAssets.map((assets) => (

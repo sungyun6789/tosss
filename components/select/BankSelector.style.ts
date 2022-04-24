@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 
-export const BankSelectorWrapper = styled.section`
+import type { BankSelectorModel } from './BankSelector.type';
+
+export const BankSelectorWrapper = styled.section<BankSelectorModel>`
   width: 300px;
   border: 1px solid #f0f0f0;
   margin-bottom: 30px;
@@ -30,7 +32,7 @@ export const BankSelectorWrapper = styled.section`
     display: flex;
     flex-direction: column;
     background: white;
-    padding: 20px;
+    padding: ${(props) => (props.isOpen ? '20px' : undefined)};
     border-radius: 25px;
   }
 
