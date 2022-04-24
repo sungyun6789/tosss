@@ -9,10 +9,11 @@ export const TransferPageWrapper = styled.section`
     justify-content: center;
 
     input {
-      width: 280px;
-      height: 40px;
+      width: 300px;
+      height: 50px;
       border: 1px solid #f0f0f0;
-      padding: 0 10px;
+      padding: 10px;
+      box-sizing: border-box;
 
       font-size: 18px;
       text-align: right;
