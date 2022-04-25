@@ -18,8 +18,8 @@ const TransferPage = () => {
   const deposit = () => {
     if (depositSelect === withdrawalSelect) return alert('같은 계좌로는 보낼 수 없습니다.');
 
-    const depositIndex = transferAssets.findIndex(({ wallet_name }) => wallet_name === depositSelect);
-    const withdrawalIndex = transferAssets.findIndex(({ wallet_name }) => wallet_name === withdrawalSelect);
+    const depositIndex = assets.findIndex(({ wallet_name }) => wallet_name === depositSelect);
+    const withdrawalIndex = assets.findIndex(({ wallet_name }) => wallet_name === withdrawalSelect);
 
     /** 송금 */
     setAssets(
