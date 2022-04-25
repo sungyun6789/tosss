@@ -1,5 +1,6 @@
 import { assetsState } from 'atoms';
 import copy from 'utils/copy';
+import krw from 'utils/krw';
 
 import { useRouter } from 'next/router';
 import { useRecoilValue } from 'recoil';
@@ -23,7 +24,7 @@ const AssetsPage = () => {
       <AssetsInfoSection>
         <span onClick={() => copy(matchData.address)}>{matchData.address}</span>
         <article>
-          <div className="balance">{matchData.balance.toLocaleString('ko-KR')}원</div>
+          <div className="balance">{krw(matchData.balance)}</div>
         </article>
       </AssetsInfoSection>
     </>

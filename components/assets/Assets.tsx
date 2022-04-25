@@ -1,4 +1,5 @@
 import { assetsSelector } from 'atoms';
+import krw from 'utils/krw';
 
 import { useRouter } from 'next/router';
 import { useRecoilValue } from 'recoil';
@@ -19,7 +20,7 @@ const Assets = () => {
               <p className="logo">Bank Image</p>
               <li className="name">{wallet_name}</li>
             </div>
-            <li className="balance">{balance.toLocaleString('ko-KR')}원</li>
+            <li className="balance">{krw(balance)}</li>
           </article>
         ))}
       </AssetsUL>

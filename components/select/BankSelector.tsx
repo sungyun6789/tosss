@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import type { AssetsModel } from 'atoms';
+import krw from 'utils/krw';
 
 import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
 
@@ -32,7 +33,7 @@ const BankSelector = ({ transferAssets, select, setSelect }: Props) => {
                       onClick={() => setSelect(wallet_name)}
                     >
                       <div>{wallet_name}</div>
-                      <div>{balance.toLocaleString('ko-KR')}원</div>
+                      <div>{krw(balance)}</div>
                     </article>
                   </Mdiv>
                 </AnimatePresence>
@@ -41,7 +42,7 @@ const BankSelector = ({ transferAssets, select, setSelect }: Props) => {
           ) : data ? (
             <article>
               <div>{data.wallet_name}</div>
-              <div>{data.balance.toLocaleString('ko-KR')}원</div>
+              <div>{krw(data.balance)}</div>
             </article>
           ) : (
             <article>은행을 선택해주세요.</article>
