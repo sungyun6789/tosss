@@ -4,6 +4,12 @@ export const TransferPageWrapper = styled.section`
   margin: auto;
   width: 1000px;
 
+  p {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
   div {
     display: flex;
     justify-content: center;

@@ -42,9 +42,11 @@ const TransferPage = () => {
 
   return (
     <TransferPageWrapper>
+      {depositSelect && <p>내 {depositSelect} 계좌에서</p>}
       <div>
         <BankSelector transferAssets={transferAssets} select={depositSelect} setSelect={setDepositSelect} />
       </div>
+      {withdrawalSelect && <p>내 {withdrawalSelect} 계좌로</p>}
       <div>
         <BankSelector transferAssets={transferAssets} select={withdrawalSelect} setSelect={setWithdrawalSelect} />
       </div>
