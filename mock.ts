@@ -6,6 +6,20 @@ export default [
     balance: 106591,
     isTransfer: true,
     address: '0000-0000-0000-0000',
+    details: [
+      {
+        id: 1,
+        name: '편의점',
+        date: '2022년 4월 25일 21시 30분',
+        balance: 3000,
+      },
+      {
+        id: 2,
+        name: '카페',
+        date: '2022년 4월 23일 14시 00분',
+        balance: 6500,
+      },
+    ],
   },
   {
     id: 2,
@@ -14,6 +28,20 @@ export default [
     balance: 5491,
     isTransfer: true,
     address: '1111-1111-1111-1111',
+    details: [
+      {
+        id: 1,
+        name: '술',
+        date: '2022년 4월 20일 20시 44분',
+        balance: 50000,
+      },
+      {
+        id: 2,
+        name: '치킨',
+        date: '2022년 4월 21일 23시 10분',
+        balance: 24000,
+      },
+    ],
   },
   {
     id: 3,
@@ -22,6 +50,26 @@ export default [
     balance: 300000,
     isTransfer: false,
     address: '2222-2222-2222-2222',
+    details: [
+      {
+        id: 1,
+        name: '농협',
+        date: '2022년 2월 28일 00시 00분',
+        balance: 20000,
+      },
+      {
+        id: 2,
+        name: '농협',
+        date: '2022년 3월 28일 00시 00분',
+        balance: 20000,
+      },
+      {
+        id: 3,
+        name: '농협',
+        date: '2022년 4월 28일 00시 00분',
+        balance: 20000,
+      },
+    ],
   },
   {
     id: 4,
