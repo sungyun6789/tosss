@@ -18,9 +18,14 @@ const AssetsPage = () => {
 
   if (!matchData || !id) return null;
 
+  const headerText =
+    matchData.bank_name === matchData.wallet_name
+      ? matchData.bank_name
+      : `${matchData.bank_name} ${matchData.wallet_name}`;
+
   return (
     <>
-      <AssetsHeader>{`${matchData.bank_name} ${matchData.wallet_name}`}</AssetsHeader>
+      <AssetsHeader>{headerText}</AssetsHeader>
       <AssetsInfoSection>
         <span onClick={() => copy(matchData.address)}>{matchData.address}</span>
         <article>
