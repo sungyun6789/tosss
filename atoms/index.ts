@@ -9,6 +9,12 @@ export interface AssetsModel {
   balance: number;
   isTransfer: boolean;
   address: string;
+  details?: {
+    id: number;
+    name: string;
+    date: string;
+    balance: number;
+  }[];
 }
 
 export const assetsState = atom<AssetsModel[]>({
