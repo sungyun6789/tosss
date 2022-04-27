@@ -28,3 +28,19 @@ export const AssetsInfoSection = styled.section`
     font-size: 30px;
   }
 `;
+
+export const AsstesDetailSection = styled.section`
+  width: 700px;
+  margin: auto;
+  font-size: 16px;
+
+  article {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #f0f0f0;
+    margin-bottom: 10px;
+    padding: 0 30px;
+  }
+`;
