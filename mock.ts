@@ -1,4 +1,20 @@
-export default [
+export interface MockModel {
+  id: number;
+  wallet_name: string;
+  bank_name: string;
+  balance: number;
+  isTransfer: boolean;
+  address: string;
+  details?: {
+    id: number;
+    name: string;
+    date: string;
+    balance: number;
+    type: 'withdrawal' | 'deposit';
+  }[];
+}
+
+const mock: MockModel[] = [
   {
     id: 1,
     wallet_name: '토스뱅크',
@@ -94,3 +110,5 @@ export default [
     address: '3333-3333-3333-3333',
   },
 ];
+
+export default mock;
