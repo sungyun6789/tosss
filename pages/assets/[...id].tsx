@@ -29,21 +29,22 @@ const AssetsPage = () => {
       <AssetsInfoSection>
         <span onClick={() => copy(matchData.address)}>{matchData.address}</span>
         <article>
-          <div className="balance">{krw(matchData.balance)}</div>
+          <div>{krw(matchData.balance)}</div>
         </article>
       </AssetsInfoSection>
-      <AsstesDetailSection>
-        {matchData.details?.map((data) => (
-          <article key={data.id}>
-            <div>
-              <div>{data.name}</div>
-              <div>{data.date}</div>
-            </div>
-
-            <div>{krw(data.balance)}</div>
-          </article>
-        ))}
-      </AsstesDetailSection>
+      {matchData.details && (
+        <AsstesDetailSection>
+          {matchData.details.map((data) => (
+            <article key={data.id}>
+              <div>
+                <div>{data.name}</div>
+                <div>{data.date}</div>
+              </div>
+              <div>{krw(data.balance)}</div>
+            </article>
+          ))}
+        </AsstesDetailSection>
+      )}
     </>
   );
 };
