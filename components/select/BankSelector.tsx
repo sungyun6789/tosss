@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import type { AssetsModel } from 'atoms';
+import type { MockModel } from 'mock';
 import krw from 'utils/krw';
 
 import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
@@ -10,7 +10,7 @@ import { BankSelectorWrapper } from './BankSelector.style';
 const { ul: Mui, li: Mli, div: Mdiv } = motion;
 
 interface Props {
-  transferAssets: AssetsModel[];
+  transferAssets: MockModel[];
   select?: string;
   setSelect: (select?: string) => void;
 }

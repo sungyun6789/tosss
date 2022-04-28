@@ -1,33 +1,18 @@
 import { atom, selector } from 'recoil';
 
+import type { MockModel } from '../mock';
 import mock from '../mock';
 
-export interface AssetsModel {
-  id: number;
-  wallet_name: string;
-  bank_name: string;
-  balance: number;
-  isTransfer: boolean;
-  address: string;
-  details?: {
-    id: number;
-    name: string;
-    date: string;
-    balance: number;
-    type: string;
-  }[];
-}
-
-export const assetsState = atom<AssetsModel[]>({
+export const assetsState = atom<MockModel[]>({
   key: 'assets',
   default: mock,
 });
 
-export const assetsSelector = selector<AssetsModel[]>({
+export const assetsSelector = selector<MockModel[]>({
   key: 'assetsSelector',
   get: ({ get }) => {
     const data = get(assetsState);
-    return (JSON.parse(JSON.stringify(data)) as AssetsModel[]).sort((lhs, rhs) =>
+    return (JSON.parse(JSON.stringify(data)) as MockModel[]).sort((lhs, rhs) =>
       lhs.wallet_name.localeCompare(rhs.wallet_name),
     );
   },

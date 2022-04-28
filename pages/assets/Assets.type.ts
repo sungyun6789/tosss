@@ -1,3 +1,3 @@
 export interface DWType {
-  type: string;
+  type: 'withdrawal' | 'deposit';
 }

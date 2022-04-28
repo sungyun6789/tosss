@@ -1,3 +1,5 @@
+import type { DWType } from 'pages/assets/Assets.type';
+
 export interface MockModel {
   id: number;
   wallet_name: string;
@@ -10,7 +12,7 @@ export interface MockModel {
     name: string;
     date: string;
     balance: number;
-    type: 'withdrawal' | 'deposit';
+    type: DWType['type'];
   }[];
 }
 
