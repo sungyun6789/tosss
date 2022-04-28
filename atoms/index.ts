@@ -14,6 +14,7 @@ export interface AssetsModel {
     name: string;
     date: string;
     balance: number;
+    type: string;
   }[];
 }
 
