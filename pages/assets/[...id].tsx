@@ -5,7 +5,7 @@ import krw from 'utils/krw';
 import { useRouter } from 'next/router';
 import { useRecoilValue } from 'recoil';
 
-import { AssetsHeader, AssetsInfoSection, AsstesDetailSection } from './AssetsPage.style';
+import { AssetsHeader, AssetsInfoSection, AsstesDetailSection, DetailDate, DetailName } from './AssetsPage.style';
 
 const AssetsPage = () => {
   const assets = useRecoilValue(assetsState);
@@ -37,8 +37,8 @@ const AssetsPage = () => {
           {matchData.details.map((data) => (
             <article key={data.id}>
               <div>
-                <div>{data.name}</div>
-                <div>{data.date}</div>
+                <DetailName>{data.name}</DetailName>
+                <DetailDate>{data.date}</DetailDate>
               </div>
               <div>{krw(data.balance)}</div>
             </article>

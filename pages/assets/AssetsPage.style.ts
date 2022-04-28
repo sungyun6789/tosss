@@ -24,7 +24,7 @@ export const AssetsInfoSection = styled.section`
   div {
     display: flex;
     justify-content: flex-end;
-    margin-top: 30px;
+    margin: 30px 0;
     font-size: 30px;
   }
 `;
@@ -33,14 +33,23 @@ export const AsstesDetailSection = styled.section`
   width: 700px;
   margin: auto;
   font-size: 16px;
+  border: 1px solid #f0f0f0;
 
   article {
     height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #f0f0f0;
-    margin-bottom: 10px;
+    margin: 5px 0;
     padding: 0 30px;
+    cursor: pointer;
   }
+`;
+
+export const DetailName = styled.div`
+  margin-bottom: 5px;
+`;
+
+export const DetailDate = styled.div`
+  font-size: 12px;
 `;
