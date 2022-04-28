@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 
+import type { DWType } from './Assets.type';
+
 export const AssetsHeader = styled.h1`
   display: flex;
   justify-content: center;
@@ -52,4 +54,8 @@ export const DetailName = styled.div`
 
 export const DetailDate = styled.div`
   font-size: 12px;
+`;
+
+export const DetailBalance = styled.div<DWType>`
+  color: ${(props) => (props.type === 'deposit' ? '#2196f3' : '#3A3845')};
 `;
