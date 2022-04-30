@@ -5,20 +5,22 @@ export const BenefitWrapper = styled.section`
   margin: auto;
 
   h1 {
-    text-align: center;
-    font-size: 30px;
-  }
-
-  h3 {
     font-size: 20px;
-    text-align: center;
-    margin-top: 50px;
+    font-weight: bold;
+    margin: 50px 0 20px 0;
   }
 
   article {
     padding: 20px;
     border-bottom: 1px solid #f0f0f0;
+    transition: 0.3s;
     cursor: pointer;
+    :hover {
+      background-color: #fafafa;
+    }
+    div {
+      padding: 0 10px;
+    }
   }
 `;
 

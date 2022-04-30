@@ -9,7 +9,7 @@ const BenefitsPage = () => {
         <SecondText>10원</SecondText>
       </article>
 
-      <h3>포인트 모으기</h3>
+      <h1>포인트 모으기</h1>
       <article>
         <FirstText>만보기</FirstText>
         <SecondText>140원 받기</SecondText>
