@@ -25,9 +25,35 @@ const TransferPage = () => {
     setAssets(
       Object.entries(assets).map(([key, value]) => {
         if (+key === depositIndex) {
-          return { ...value, balance: value.balance - price! };
+          return {
+            ...value,
+            balance: value.balance - price!,
+            details: [
+              ...value.details!,
+              {
+                id: value.details!.length + 1,
+                name: withdrawalSelect!,
+                date: new Date().toISOString(),
+                balance: price!,
+                type: 'withdrawal',
+              },
+            ],
+          };
         } else if (+key === withdrawalIndex) {
-          return { ...value, balance: value.balance + price! };
+          return {
+            ...value,
+            balance: value.balance + price!,
+            details: [
+              ...value.details!,
+              {
+                id: value.details!.length + 1,
+                name: depositSelect!,
+                date: new Date().toISOString(),
+                balance: price!,
+                type: 'deposit',
+              },
+            ],
+          };
         } else {
           return value;
         }
