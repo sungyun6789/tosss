@@ -3,6 +3,7 @@ import { useState } from 'react';
 import DWButton from '@components/button/DWButton';
 import BankSelector from '@components/select/BankSelector';
 import { assetsState } from 'atoms';
+import date from 'utils/date';
 
 import { useRecoilState } from 'recoil';
 
@@ -33,7 +34,7 @@ const TransferPage = () => {
               {
                 id: value.details!.length + 1,
                 name: withdrawalSelect!,
-                date: new Date().toISOString(),
+                date,
                 balance: price!,
                 type: 'withdrawal',
               },
@@ -48,7 +49,7 @@ const TransferPage = () => {
               {
                 id: value.details!.length + 1,
                 name: depositSelect!,
-                date: new Date().toISOString(),
+                date,
                 balance: price!,
                 type: 'deposit',
               },
