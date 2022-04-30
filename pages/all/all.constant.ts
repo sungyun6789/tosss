@@ -8,10 +8,10 @@ export const MENU: MenuModel[] = [
         url: '/all/송금',
       },
       '내 계좌': {
-        url: '/all/내계좌',
+        url: '/all/내 계좌',
       },
       '오늘의 머니 팁': {
-        url: '/all/오늘의머니팁',
+        url: '/all/오늘의 머니 팁',
       },
     },
   },
@@ -25,13 +25,13 @@ export const MENU: MenuModel[] = [
         url: '/all/새소식',
       },
       '청와대 관람 신청하기': {
-        url: '/all/청와대관람신청하기',
+        url: '/all/청와대 관람 신청하기',
       },
       '증명서 떼기': {
-        url: '/all/증명서떼기',
+        url: '/all/증명서 떼기',
       },
       '신용카드 한도 비교': {
-        url: '/all/신용카드한도비교',
+        url: '/all/신용카드 한도 비교',
       },
     },
   },
@@ -51,7 +51,7 @@ export const MENU: MenuModel[] = [
         url: '/all/현금서비스',
       },
       '아파트 대출한도 계산기': {
-        url: '/all/아파트대출한도계산기',
+        url: '/all/아파트 대출한도 계산기',
       },
     },
   },
@@ -59,16 +59,16 @@ export const MENU: MenuModel[] = [
     category: '보험',
     menu: {
       '내 보험': {
-        url: '/all/내보험',
+        url: '/all/내 보험',
       },
       '전문가에게 물어보기': {
-        url: '/all/전문가에게물어보기',
+        url: '/all/전문가에게 물어보기',
       },
       '병원비 돌려받기': {
-        url: '/all/병원비돌려받기',
+        url: '/all/병원비 돌려받기',
       },
       '보험 둘러보기': {
-        url: '/all/보험둘러보기',
+        url: '/all/보험 둘러보기',
       },
     },
   },
@@ -79,10 +79,10 @@ export const MENU: MenuModel[] = [
         url: '/all/송금',
       },
       '내 토스아이디': {
-        url: '/all/내토스아이디',
+        url: '/all/내 토스 아이디',
       },
       '사진으로 송금': {
-        url: '/all/사진으로송금',
+        url: '/all/사진으로 송금',
       },
       더치페이: {
         url: '/all/더치페이',
@@ -104,19 +104,19 @@ export const MENU: MenuModel[] = [
     category: '계좌',
     menu: {
       '내 계좌': {
-        url: '/all/내계좌',
+        url: '/all/내 계좌',
       },
       '숨은 내 계좌 찾기': {
-        url: '/all/숨은내계좌찾기',
+        url: '/all/숨은 내 계좌 찾기',
       },
       '계좌 만들기': {
-        url: '/all/계좌만들기',
+        url: '/all/계좌 만들기',
       },
       '토스뱅크 연 2% 통장 만들기': {
-        url: '/all/토스뱅크연2%통장만들기',
+        url: '/all/토스뱅크 연 2% 통장 만들기',
       },
       '돈 같이 모으기': {
-        url: '/all/돈같이모으기',
+        url: '/all/돈 같이 모으기',
       },
     },
   },
@@ -124,10 +124,10 @@ export const MENU: MenuModel[] = [
     category: '신용',
     menu: {
       '내 신용점수': {
-        url: '/all/내신용점수',
+        url: '/all/내 신용점수',
       },
       '신용점수 올리기': {
-        url: '/all/신용점수올리기',
+        url: '/all/신용점수 올리기',
       },
     },
   },
@@ -135,25 +135,25 @@ export const MENU: MenuModel[] = [
     category: '카드',
     menu: {
       '내 카드': {
-        url: '/all/내카드',
+        url: '/all/내 카드',
       },
       '카드 알림': {
-        url: '/all/카드알림',
+        url: '/all/카드 알림',
       },
       '혜택 좋은 신용카드 만들기': {
-        url: '/all/혜택좋은신용카드만들기',
+        url: '/all/혜택 좋은 신용카드 만들기',
       },
       '혜택 좋은 체크카드 만들기': {
-        url: '/all/혜택좋은체크카드만들기',
+        url: '/all/혜택 좋은 체크카드 만들기',
       },
       '신용카드 한도 비교': {
-        url: '/all/신용카드한도비교',
+        url: '/all/신용카드 한도 비교',
       },
       토스뱅크카드: {
         url: '/all/토스뱅크카드',
       },
       '토스신용카드 만들기': {
-        url: '/all/토스신용카드만들기',
+        url: '/all/토스신용카드 만들기',
       },
     },
   },
@@ -161,13 +161,13 @@ export const MENU: MenuModel[] = [
     category: '자동차',
     menu: {
       '내 차 시세': {
-        url: '/all/내차시세',
+        url: '/all/내 차 시세',
       },
       '차 보험료 조회': {
-        url: '/all/차보험료조회',
+        url: '/all/차 보험료 조회',
       },
       '내 차 팔기': {
-        url: '/all/내차팔기',
+        url: '/all/내 차 팔기',
       },
     },
   },
@@ -175,10 +175,10 @@ export const MENU: MenuModel[] = [
     category: '부동산',
     menu: {
       '내 부동산 시세조회': {
-        url: '/all/내부동산시세조회',
+        url: '/all/내 부동산 시세조회',
       },
       '내 아파트 관리비': {
-        url: '/all/내아파트관리비',
+        url: '/all/내 아파트 관리비',
       },
     },
   },
@@ -186,10 +186,10 @@ export const MENU: MenuModel[] = [
     category: '토스 주민센터',
     menu: {
       '청와대 관람 신청하기': {
-        url: '/all/청와대관람신청하기',
+        url: '/all/청와대 관람 신청하기',
       },
       '증명서 떼기': {
-        url: '/all/증명서떼기',
+        url: '/all/증명서 떼기',
       },
     },
   },
@@ -203,10 +203,10 @@ export const MENU: MenuModel[] = [
         url: '/all/토스프라임',
       },
       '카드 이벤트 상품': {
-        url: '/all/카드이벤트상품',
+        url: '/all/카드 이벤트 상품',
       },
       '결제할 때 할인받기': {
-        url: '/all/결제할때할인받기',
+        url: '/all/결제할 때 할인받기',
       },
     },
   },
@@ -214,34 +214,34 @@ export const MENU: MenuModel[] = [
     category: '생활',
     menu: {
       '숨은 정부지원금 찾기': {
-        url: '/all/숨은정부지원금찾기',
+        url: '/all/숨은 정부지원금 찾기',
       },
       오픈채팅방: {
         url: '/all/오픈채팅방',
       },
       '광고 전화 차단하기': {
-        url: '/all/광고전화차단하기',
+        url: '/all/광고 전화 차단하기',
       },
       '상품권 구매하기': {
-        url: '/all/상품권구매하기',
+        url: '/all/상품권 구매하기',
       },
       'KT 통신비 내기': {
-        url: '/all/KT통신비내기',
+        url: '/all/KT 통신비 내기',
       },
       'ATM 현금 찾기': {
-        url: '/all/ATM현금찾기',
+        url: '/all/ATM 현금 찾기',
       },
       환전: {
         url: '/all/환전',
       },
       '오늘의 머니 팁': {
-        url: '/all/오늘의머니팁',
+        url: '/all/오늘의 머니 팁',
       },
       '정치후원금 보내기': {
-        url: '/all/정치후원금보내기',
+        url: '/all/정치후원금 보내기',
       },
       '공모주 청약 일정': {
-        url: '/all/공모주청약일정',
+        url: '/all/공모주 청약 일정',
       },
     },
   },
@@ -249,22 +249,22 @@ export const MENU: MenuModel[] = [
     category: '사장님',
     menu: {
       '내 매출 장부': {
-        url: '/all/내매출장부',
+        url: '/all/내 매출 장부',
       },
       '급여명세서 보내기': {
-        url: '/all/급여명세서보내기',
+        url: '/all/급여명세서 보내기',
       },
       '배달 매출 늘리기': {
-        url: '/all/배달매출늘리기',
+        url: '/all/배달 매출 늘리기',
       },
       '세금계산서 알림 받기': {
-        url: '/all/세금계산기알림받기',
+        url: '/all/세금계산기 알림 받기',
       },
       '숨은 카드매출 찾기': {
-        url: '/all/숨은카드매출찾기',
+        url: '/all/숨은 카드매출 찾기',
       },
       '세금계산서 발행하기': {
-        url: '/all/세금계산서발행하기',
+        url: '/all/세금계산서 발행하기',
       },
     },
   },
