@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { MENU } from './all.constant';
 import { AllPageWrapper, MenuTitle, MenuWrapper } from './all.style';
 
@@ -7,10 +9,14 @@ const AllPage = () => {
       {MENU.map(({ category, menu }) => (
         <MenuWrapper key={category}>
           <MenuTitle>{category}</MenuTitle>
-          {Object.entries(menu).map(([key]) => (
-            <article key={key}>
-              <div>{key}</div>
-            </article>
+          {Object.entries(menu).map(([key, value]) => (
+            <Link key={key} href={value.url}>
+              <a>
+                <article>
+                  <div>{key}</div>
+                </article>
+              </a>
+            </Link>
           ))}
         </MenuWrapper>
       ))}

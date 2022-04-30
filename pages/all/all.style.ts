@@ -16,6 +16,11 @@ export const MenuWrapper = styled.div`
       padding-left: 20px;
     }
   }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
 `;
 
 export const MenuTitle = styled.h3`
