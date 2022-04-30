@@ -4,9 +4,14 @@ import { AllPageWrapper, MenuTitle, MenuWrapper } from './all.style';
 const AllPage = () => {
   return (
     <AllPageWrapper>
-      {MENU.map((value) => (
-        <MenuWrapper key={value.category}>
-          <MenuTitle>{value.category}</MenuTitle>
+      {MENU.map(({ category, menu }) => (
+        <MenuWrapper key={category}>
+          <MenuTitle>{category}</MenuTitle>
+          {Object.entries(menu).map(([key]) => (
+            <article key={key}>
+              <div>{key}</div>
+            </article>
+          ))}
         </MenuWrapper>
       ))}
     </AllPageWrapper>

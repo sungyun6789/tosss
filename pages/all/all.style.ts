@@ -6,11 +6,20 @@ export const AllPageWrapper = styled.section`
 `;
 
 export const MenuWrapper = styled.div`
-  min-height: 100px;
   border-bottom: 1px solid #f0f0f0;
+  article {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+    div {
+      padding-left: 20px;
+    }
+  }
 `;
 
 export const MenuTitle = styled.h3`
-  padding-top: 30px;
+  padding: 20px 0;
   font-size: 20px;
+  font-weight: bold;
 `;
