@@ -28,3 +28,12 @@ export const MenuTitle = styled.h3`
   font-size: 20px;
   font-weight: bold;
 `;
+
+export const DetailWrapper = styled.section`
+  text-align: center;
+
+  h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+`;
