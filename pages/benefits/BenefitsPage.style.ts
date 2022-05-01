@@ -7,7 +7,7 @@ export const BenefitWrapper = styled.section`
   h1 {
     font-size: 20px;
     font-weight: bold;
-    margin: 50px 0 20px 0;
+    padding: 20px 0;
   }
 
   article {
