@@ -32,12 +32,12 @@ export const AssetsUL = styled.ul`
   div {
     width: 200px;
 
-    .name {
+    li {
       color: gray;
     }
   }
 
-  .balance {
+  li {
     width: 200px;
   }
 `;
