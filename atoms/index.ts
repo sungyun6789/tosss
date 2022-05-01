@@ -17,3 +17,11 @@ export const assetsSelector = selector<MockModel[]>({
     );
   },
 });
+
+export const tossBankSelector = selector<MockModel[]>({
+  key: 'tossBankSelector',
+  get: ({ get }) => {
+    const data = get(assetsState);
+    return data.filter(({ bank_name }) => bank_name === '토스뱅크');
+  },
+});
