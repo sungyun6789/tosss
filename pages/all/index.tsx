@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
-import { MENU } from './all.constant';
-import { AllPageWrapper, MenuTitle, MenuWrapper } from './all.style';
+import { MENU } from './AllPage.constant';
+import { AllPageWrapper, MenuTitle, MenuWrapper } from './AllPage.style';
 
 const AllPage = () => {
   return (

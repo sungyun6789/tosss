@@ -1,4 +1,4 @@
-import { BenefitWrapper, FirstText, SecondText } from './Benefits.style';
+import { BenefitWrapper, FirstText, SecondText } from './BenefitsPage.style';
 
 const BenefitsPage = () => {
   return (

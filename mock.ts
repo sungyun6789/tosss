@@ -1,4 +1,4 @@
-import type { DWType } from 'pages/assets/Assets.type';
+import type { DWType } from 'pages/assets/AssetsPage.type';
 
 export interface MockModel {
   id: number;

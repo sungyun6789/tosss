@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import type { DWType } from './Assets.type';
+import type { DWType } from './AssetsPage.type';
 
 export const AssetsHeader = styled.h1`
   display: flex;

@@ -1,4 +1,4 @@
-import type { MenuModel } from './all.type';
+import type { MenuModel } from './AllPage.type';
 
 export const MENU: MenuModel[] = [
   {

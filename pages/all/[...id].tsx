@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 
-import { DetailWrapper } from './all.style';
+import { DetailWrapper } from './AllPage.style';
 
 const AllDetails = () => {
   const router = useRouter();
