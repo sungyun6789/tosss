@@ -1,5 +1,11 @@
+import { SponsoredButtonWrapper } from './SponsoredButton.style';
+
 const SponsoredButton = () => {
-  return <div>후원</div>;
+  return (
+    <SponsoredButtonWrapper>
+      <button>후원</button>
+    </SponsoredButtonWrapper>
+  );
 };
 
 export default SponsoredButton;
