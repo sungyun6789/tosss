@@ -14,15 +14,15 @@ const TossBankPage = () => {
         <ul>
           <li>
             <p>토스뱅크 대출 한도</p>
-            <p>14,000,000 원</p>
+            <span>14,000,000 원</span>
           </li>
           <li>
             <p>토스뱅크카드</p>
-            <p>0 원</p>
+            <span>0 원</span>
           </li>
           <li>
             <p>돈 모으기</p>
-            <p>1,000 원</p>
+            <span>1,000 원</span>
           </li>
         </ul>
         <h3>토스뱅크 둘러보기</h3>

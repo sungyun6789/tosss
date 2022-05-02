@@ -23,7 +23,19 @@ export const TossBankWrapper = styled.section`
   }
 
   li {
+    margin-bottom: 20px;
     height: 50px;
+    border-bottom: 1px solid #f0f0f0;
+
+    p {
+      display: flex;
+      justify-content: center;
+    }
+
+    span {
+      display: flex;
+      justify-content: right;
+    }
   }
 `;
 
