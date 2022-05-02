@@ -16,6 +16,7 @@ export const TossBankWrapper = styled.section`
     font-size: 20px;
     text-align: center;
     padding: 20px;
+    margin-top: 50px;
   }
 
   ul {
@@ -68,5 +69,22 @@ export const TossBankBox = styled.article`
   border-radius: 30px;
   box-sizing: border-box;
   margin-bottom: 10px;
-  padding: 20px;
+
+  p {
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  div {
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #f0f0f0;
+    color: #2196f3;
+  }
 `;
