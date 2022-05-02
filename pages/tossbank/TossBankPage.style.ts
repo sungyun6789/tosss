@@ -25,17 +25,18 @@ export const TossBankWrapper = styled.section`
 
   li {
     margin-bottom: 20px;
-    height: 50px;
     border-bottom: 1px solid #f0f0f0;
 
     p {
       display: flex;
       justify-content: center;
+      color: gray;
     }
 
     span {
       display: flex;
       justify-content: right;
+      margin-bottom: 5px;
     }
   }
 `;
@@ -86,5 +87,14 @@ export const TossBankBox = styled.article`
     justify-content: center;
     border-top: 1px solid #f0f0f0;
     color: #2196f3;
+    transition: 0.5s;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    cursor: pointer;
+    :hover {
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      background-color: #f0f0f0;
+    }
   }
 `;
