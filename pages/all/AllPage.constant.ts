@@ -2,6 +2,14 @@ import type { MenuModel } from './AllPage.type';
 
 export const MENU: MenuModel[] = [
   {
+    category: '관리자',
+    menu: {
+      관리자: {
+        url: '/admin',
+      },
+    },
+  },
+  {
     category: '최근',
     menu: {
       송금: {

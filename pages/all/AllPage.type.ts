@@ -1,5 +1,6 @@
 export interface MenuModel {
   category:
+    | '관리자'
     | '최근'
     | '신규'
     | '대출'
