@@ -86,7 +86,7 @@ export const TossBankBox = styled.article`
     align-items: center;
     justify-content: center;
     border-top: 1px solid #f0f0f0;
-    color: #2196f3;
+    color: var(--tossLightColor);
     transition: 0.5s;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;

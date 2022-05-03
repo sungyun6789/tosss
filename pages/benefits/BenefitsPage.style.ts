@@ -32,5 +32,5 @@ export const FirstText = styled.div`
 
 export const SecondText = styled.div`
   font-size: 16px;
-  color: #2196f3;
+  color: var(--tossLightColor);
 `;

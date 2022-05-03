@@ -57,5 +57,5 @@ export const DetailDate = styled.div`
 `;
 
 export const DetailBalance = styled.div<DWType>`
-  color: ${(props) => (props.type === 'deposit' ? '#2196f3' : '#3A3845')};
+  color: ${(props) => (props.type === 'deposit' ? 'var(--tossLightColor)' : '#3A3845')};
 `;

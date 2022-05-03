@@ -25,11 +25,11 @@ export const AdminPageWrapper = styled.section`
 
   button {
     color: white;
-    background-color: #2196f3;
+    background-color: var(--tossLightColor);
     transition: 0.3s;
     cursor: pointer;
     :hover {
-      background-color: #1565c0;
+      background-color: var(--tossDeepColor);
     }
   }
 `;

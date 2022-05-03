@@ -13,12 +13,12 @@ export const SponsoredButtonWrapper = styled.section`
     border: none;
     border-radius: 10px;
     color: white;
-    background-color: #2196f3;
+    background-color: var(--tossLightColor);
     transition: 0.3s;
     font-size: 15px;
     cursor: pointer;
     :hover {
-      background-color: #1565c0;
+      background-color: var(--tossDeepColor);
     }
   }
 `;

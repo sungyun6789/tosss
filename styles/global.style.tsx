@@ -124,6 +124,11 @@ const globalStyle = css`
     border-collapse: collapse;
     border-spacing: 0;
   }
+
+  :root {
+    --tossLightColor: #2196f3;
+    --tossDeepColor: #1565c0;
+  }
 `;
 
 const GlobalStyle = () => <Global styles={globalStyle} />;

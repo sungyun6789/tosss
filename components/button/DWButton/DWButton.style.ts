@@ -22,10 +22,10 @@ export const DWButtonWrapper = styled.section`
 export const DepositButton = styled.button`
   :not(:disabled) {
     color: white;
-    background-color: #2196f3;
+    background-color: var(--tossLightColor);
     cursor: pointer;
     :hover {
-      background-color: #1565c0;
+      background-color: var(--tossDeepColor);
     }
   }
 `;
