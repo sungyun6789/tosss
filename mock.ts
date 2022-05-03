@@ -27,10 +27,10 @@ const mock: MockModel[] = [
     details: [
       {
         id: 1,
-        name: '편의점',
-        date: '2022년 4월 05일 21시 30분',
-        balance: 3000,
-        type: 'withdrawal',
+        name: '월급',
+        date: '2022년 4월 25일 14시 00분',
+        balance: 10000,
+        type: 'deposit',
       },
       {
         id: 2,
@@ -41,10 +41,10 @@ const mock: MockModel[] = [
       },
       {
         id: 3,
-        name: '월급',
-        date: '2022년 4월 25일 14시 00분',
-        balance: 10000,
-        type: 'deposit',
+        name: '편의점',
+        date: '2022년 4월 05일 21시 30분',
+        balance: 3000,
+        type: 'withdrawal',
       },
     ],
   },
@@ -58,16 +58,16 @@ const mock: MockModel[] = [
     details: [
       {
         id: 1,
-        name: '술',
-        date: '2022년 4월 20일 20시 44분',
-        balance: 50000,
+        name: '치킨',
+        date: '2022년 4월 21일 23시 10분',
+        balance: 24000,
         type: 'withdrawal',
       },
       {
         id: 2,
-        name: '치킨',
-        date: '2022년 4월 21일 23시 10분',
-        balance: 24000,
+        name: '술',
+        date: '2022년 4월 20일 20시 44분',
+        balance: 50000,
         type: 'withdrawal',
       },
     ],
@@ -83,7 +83,7 @@ const mock: MockModel[] = [
       {
         id: 1,
         name: '농협',
-        date: '2022년 2월 28일 00시 00분',
+        date: '2022년 4월 28일 00시 00분',
         balance: 20000,
         type: 'withdrawal',
       },
@@ -97,7 +97,7 @@ const mock: MockModel[] = [
       {
         id: 3,
         name: '농협',
-        date: '2022년 4월 28일 00시 00분',
+        date: '2022년 2월 28일 00시 00분',
         balance: 20000,
         type: 'withdrawal',
       },
