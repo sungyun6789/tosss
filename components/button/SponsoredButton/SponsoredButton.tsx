@@ -1,4 +1,4 @@
-import TossButton from '../TossButton/TossButton';
+import TossButton from '../TossButton';
 
 import { SponsoredButtonWrapper } from './SponsoredButton.style';
 

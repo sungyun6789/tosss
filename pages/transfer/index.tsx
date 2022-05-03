@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import TossButton from '@components/button/TossButton/TossButton';
+import TossButton from '@components/button/TossButton';
 import BankSelector from '@components/select/BankSelector';
 import { assetsState } from 'atoms';
 import date from 'utils/date';
