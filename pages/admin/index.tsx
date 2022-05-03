@@ -20,7 +20,6 @@ const AdminPage = () => {
               ...value,
               balance: value.balance + price,
               details: [
-                ...value.details!,
                 {
                   id: value.details!.length + 1,
                   name: '관리자 입금',
@@ -28,6 +27,7 @@ const AdminPage = () => {
                   balance: price,
                   type: 'deposit',
                 },
+                ...value.details!,
               ],
             };
           } else {

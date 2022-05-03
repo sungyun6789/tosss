@@ -30,7 +30,6 @@ const TransferPage = () => {
             ...value,
             balance: value.balance - price!,
             details: [
-              ...value.details!,
               {
                 id: value.details!.length + 1,
                 name: withdrawalSelect!,
@@ -38,6 +37,7 @@ const TransferPage = () => {
                 balance: price!,
                 type: 'withdrawal',
               },
+              ...value.details!,
             ],
           };
         } else if (+key === withdrawalIndex) {
@@ -45,7 +45,6 @@ const TransferPage = () => {
             ...value,
             balance: value.balance + price!,
             details: [
-              ...value.details!,
               {
                 id: value.details!.length + 1,
                 name: depositSelect!,
@@ -53,6 +52,7 @@ const TransferPage = () => {
                 balance: price!,
                 type: 'deposit',
               },
+              ...value.details!,
             ],
           };
         } else {
