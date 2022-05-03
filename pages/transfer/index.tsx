@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import DWButton from '@components/button/DWButton';
+import TossButton from '@components/button/TossButton/TossButton';
 import BankSelector from '@components/select/BankSelector';
 import { assetsState } from 'atoms';
 import date from 'utils/date';
@@ -81,9 +81,10 @@ const TransferPage = () => {
         <input placeholder="금액 입력" type="number" value={price ?? ''} onChange={(e) => setPrice(+e.target.value)} />
       </div>
       <div>
-        <DWButton
-          deposit={deposit}
+        <TossButton
+          onClick={deposit}
           disabled={depositSelect === undefined || withdrawalSelect === undefined || !price}
+          text="보내기"
         />
       </div>
     </TransferPageWrapper>
