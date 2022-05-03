@@ -1,12 +1,16 @@
 ## 토스 앱이 웹으로 존재한다면 이런 느낌이지 않을까
 
+#### 사용된 패키지
+
 ```json
   "dependencies": {
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
+    "framer-motion": "^6.3.0",
     "next": "^12.0.8",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "recoil": "^0.7.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^12.1.0",
