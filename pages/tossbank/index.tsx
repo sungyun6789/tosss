@@ -1,6 +1,13 @@
+import { tossBankSelector } from 'atoms';
+import krw from 'utils/krw';
+
+import { useRecoilValue } from 'recoil';
+
 import { TossBankBox, TossBankImage, TossBankInfo, TossBankWrapper } from './TossBankPage.style';
 
 const TossBankPage = () => {
+  const tossBankData = useRecoilValue(tossBankSelector)[0];
+
   return (
     <TossBankWrapper>
       <article>
@@ -8,7 +15,7 @@ const TossBankPage = () => {
         <TossBankImage />
         <TossBankInfo>
           <p>토스뱅크 통장</p>
-          <span>3,000원</span>
+          <span>{krw(tossBankData.balance)}</span>
         </TossBankInfo>
 
         <ul>
