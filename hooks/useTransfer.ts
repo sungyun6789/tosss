@@ -20,7 +20,7 @@ const useTransfer = ({ price, depositBank, withdrawalBank = '', isAdmin = false 
           if (value.wallet_name === depositBank) {
             return {
               ...value,
-              balance: value.balance + price,
+              balance: value.balance - price,
               details: [
                 {
                   id: value.details!.length + 1,
