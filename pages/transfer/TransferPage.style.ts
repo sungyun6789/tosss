@@ -27,5 +27,9 @@ export const TransferPageWrapper = styled.section`
         outline: none;
       }
     }
+
+    button {
+      margin-top: 30px;
+    }
   }
 `;
