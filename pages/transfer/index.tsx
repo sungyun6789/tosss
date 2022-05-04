@@ -5,7 +5,7 @@ import BankSelector from '@components/select/BankSelector';
 import { assetsState } from 'atoms';
 import useTransfer from 'hooks/useTransfer';
 
-import { useRecoilState } from 'recoil';
+import { useRecoilValue } from 'recoil';
 
 import { TransferPageWrapper } from './TransferPage.style';
 
@@ -13,7 +13,7 @@ const TransferPage = () => {
   const [depositSelect, setDepositSelect] = useState<string>();
   const [withdrawalSelect, setWithdrawalSelect] = useState<string>();
   const [price, setPrice] = useState<number>();
-  const [assets, setAssets] = useRecoilState(assetsState);
+  const assets = useRecoilValue(assetsState);
   const transferAssets = assets.filter(({ isTransfer }) => isTransfer === true);
 
   const transferHook = useTransfer({ price, depositBank: depositSelect, withdrawalBank: withdrawalSelect });
