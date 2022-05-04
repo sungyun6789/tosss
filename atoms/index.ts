@@ -18,6 +18,14 @@ export const assetsSelector = selector<MockModel[]>({
   },
 });
 
+export const isTransferSelector = selector<MockModel[]>({
+  key: 'isTransferSelector',
+  get: ({ get }) => {
+    const data = get(assetsState);
+    return data.filter(({ isTransfer }) => isTransfer === true);
+  },
+});
+
 export const tossBankSelector = selector<MockModel[]>({
   key: 'tossBankSelector',
   get: ({ get }) => {

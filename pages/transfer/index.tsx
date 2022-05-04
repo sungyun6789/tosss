@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import TossButton from '@components/button/TossButton';
 import BankSelector from '@components/select/BankSelector';
-import { assetsState } from 'atoms';
+import { isTransferSelector } from 'atoms';
 import useTransfer from 'hooks/useTransfer';
 
 import { useRecoilValue } from 'recoil';
@@ -13,8 +13,7 @@ const TransferPage = () => {
   const [depositSelect, setDepositSelect] = useState<string>();
   const [withdrawalSelect, setWithdrawalSelect] = useState<string>();
   const [price, setPrice] = useState<number>();
-  const assets = useRecoilValue(assetsState);
-  const transferAssets = assets.filter(({ isTransfer }) => isTransfer === true);
+  const assets = useRecoilValue(isTransferSelector);
 
   const transferHook = useTransfer({ price, depositBank: depositSelect, withdrawalBank: withdrawalSelect });
 
@@ -34,11 +33,11 @@ const TransferPage = () => {
     <TransferPageWrapper>
       {depositSelect && <p>내 {depositSelect} 계좌에서</p>}
       <div>
-        <BankSelector transferAssets={transferAssets} select={depositSelect} setSelect={setDepositSelect} />
+        <BankSelector transferAssets={assets} select={depositSelect} setSelect={setDepositSelect} />
       </div>
       {withdrawalSelect && <p>내 {withdrawalSelect} 계좌로</p>}
       <div>
-        <BankSelector transferAssets={transferAssets} select={withdrawalSelect} setSelect={setWithdrawalSelect} />
+        <BankSelector transferAssets={assets} select={withdrawalSelect} setSelect={setWithdrawalSelect} />
       </div>
       <div>
         <input placeholder="금액 입력" type="number" value={price ?? ''} onChange={(e) => setPrice(+e.target.value)} />
