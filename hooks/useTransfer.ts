@@ -53,6 +53,7 @@ const useTransfer = ({ price, depositBank, withdrawalBank = '', isAdmin = false 
             }
           }),
         );
+        alert('보내기에 성공했습니다!');
       } else {
         alert('잔고가 부족합니다.');
       }

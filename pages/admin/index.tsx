@@ -11,7 +11,6 @@ const AdminPage = () => {
 
   const onClick = () => {
     transferHook();
-    alert(`토스뱅크에 ${price}원 입금되었습니다.`);
     setPrice(undefined);
   };
 

@@ -22,7 +22,6 @@ const TransferPage = () => {
 
     /** 송금 */
     transferHook();
-    alert('보내기에 성공했습니다!');
     /** 초기화 */
     setPrice(undefined);
     setDepositSelect(undefined);
