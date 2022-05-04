@@ -1,43 +1,18 @@
 import { useState } from 'react';
 
-import { assetsState } from 'atoms';
-import date from 'utils/date';
-
-import { useRecoilState } from 'recoil';
+import useTransfer from 'hooks/useTransfer';
 
 import { AdminPageWrapper } from './AdminPage.style';
 
 const AdminPage = () => {
   const [price, setPrice] = useState<number>();
-  const [assets, setAssets] = useRecoilState(assetsState);
+
+  const transferHook = useTransfer({ price, depositBank: '토스뱅크', isAdmin: true });
 
   const onClick = () => {
-    if (price) {
-      setAssets(
-        assets.map((value) => {
-          if (value.wallet_name === '토스뱅크') {
-            return {
-              ...value,
-              balance: value.balance + price,
-              details: [
-                {
-                  id: value.details!.length + 1,
-                  name: '관리자 입금',
-                  date,
-                  balance: price,
-                  type: 'deposit',
-                },
-                ...value.details!,
-              ],
-            };
-          } else {
-            return value;
-          }
-        }),
-      );
-      alert(`토스뱅크에 ${price}원 입금되었습니다.`);
-      setPrice(undefined);
-    }
+    transferHook();
+    alert(`토스뱅크에 ${price}원 입금되었습니다.`);
+    setPrice(undefined);
   };
 
   return (

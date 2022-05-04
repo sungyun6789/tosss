@@ -13,8 +13,8 @@ interface Props {
 const useTransfer = ({ price, depositBank, withdrawalBank = '', isAdmin = false }: Partial<Props>) => {
   const [assets, setAssets] = useRecoilState(assetsState);
 
-  if (price && depositBank) {
-    return () => {
+  return () => {
+    if (price && depositBank) {
       setAssets(
         assets.map((value) => {
           if (value.wallet_name === depositBank) {
@@ -52,8 +52,8 @@ const useTransfer = ({ price, depositBank, withdrawalBank = '', isAdmin = false 
           }
         }),
       );
-    };
-  }
+    }
+  };
 };
 
 export default useTransfer;

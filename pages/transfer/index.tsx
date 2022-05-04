@@ -3,7 +3,7 @@ import { useState } from 'react';
 import TossButton from '@components/button/TossButton';
 import BankSelector from '@components/select/BankSelector';
 import { assetsState } from 'atoms';
-import date from 'utils/date';
+import useTransfer from 'hooks/useTransfer';
 
 import { useRecoilState } from 'recoil';
 
@@ -16,50 +16,13 @@ const TransferPage = () => {
   const [assets, setAssets] = useRecoilState(assetsState);
   const transferAssets = assets.filter(({ isTransfer }) => isTransfer === true);
 
+  const transferHook = useTransfer({ price, depositBank: depositSelect, withdrawalBank: withdrawalSelect });
+
   const deposit = () => {
     if (depositSelect === withdrawalSelect) return alert('같은 계좌로는 보낼 수 없습니다.');
 
-    const depositIndex = assets.findIndex(({ wallet_name }) => wallet_name === depositSelect);
-    const withdrawalIndex = assets.findIndex(({ wallet_name }) => wallet_name === withdrawalSelect);
-
     /** 송금 */
-    setAssets(
-      Object.entries(assets).map(([key, value]) => {
-        if (+key === depositIndex) {
-          return {
-            ...value,
-            balance: value.balance - price!,
-            details: [
-              {
-                id: value.details!.length + 1,
-                name: withdrawalSelect!,
-                date,
-                balance: price!,
-                type: 'withdrawal',
-              },
-              ...value.details!,
-            ],
-          };
-        } else if (+key === withdrawalIndex) {
-          return {
-            ...value,
-            balance: value.balance + price!,
-            details: [
-              {
-                id: value.details!.length + 1,
-                name: depositSelect!,
-                date,
-                balance: price!,
-                type: 'deposit',
-              },
-              ...value.details!,
-            ],
-          };
-        } else {
-          return value;
-        }
-      }),
-    );
+    transferHook();
     alert('보내기에 성공했습니다!');
     /** 초기화 */
     setPrice(undefined);
