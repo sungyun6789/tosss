@@ -21,14 +21,14 @@ const useTransfer = ({ price, depositBank, withdrawalBank = '', isAdmin = false 
             if (value.wallet_name === depositBank) {
               return {
                 ...value,
-                balance: value.balance - price,
+                balance: value.balance + price,
                 details: [
                   {
                     id: value.details!.length + 1,
-                    name: isAdmin ? withdrawalBank : '관리자 입금',
+                    name: isAdmin ? '관리자 입금' : withdrawalBank,
                     date,
                     balance: price,
-                    type: 'withdrawal',
+                    type: 'deposit',
                   },
                   ...value.details!,
                 ],
@@ -36,14 +36,14 @@ const useTransfer = ({ price, depositBank, withdrawalBank = '', isAdmin = false 
             } else if (value.wallet_name === withdrawalBank) {
               return {
                 ...value,
-                balance: value.balance + price,
+                balance: value.balance - price,
                 details: [
                   {
                     id: value.details!.length + 1,
                     name: depositBank,
                     date,
                     balance: price,
-                    type: 'deposit',
+                    type: 'withdrawal',
                   },
                   ...value.details!,
                 ],

@@ -30,13 +30,13 @@ const TransferPage = () => {
 
   return (
     <TransferPageWrapper>
-      {depositSelect && <p>내 {depositSelect} 계좌에서</p>}
-      <div>
-        <BankSelector transferAssets={assets} select={depositSelect} setSelect={setDepositSelect} />
-      </div>
-      {withdrawalSelect && <p>내 {withdrawalSelect} 계좌로</p>}
+      {withdrawalSelect && <p>내 {withdrawalSelect} 계좌에서</p>}
       <div>
         <BankSelector transferAssets={assets} select={withdrawalSelect} setSelect={setWithdrawalSelect} />
+      </div>
+      {depositSelect && <p>내 {depositSelect} 계좌로</p>}
+      <div>
+        <BankSelector transferAssets={assets} select={depositSelect} setSelect={setDepositSelect} />
       </div>
       <div>
         <input placeholder="금액 입력" type="number" value={price ?? ''} onChange={(e) => setPrice(+e.target.value)} />
