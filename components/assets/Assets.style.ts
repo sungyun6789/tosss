@@ -2,10 +2,13 @@ import styled from '@emotion/styled';
 
 export const AssetsSection = styled.section`
   max-width: 800px;
-  box-sizing: border-box;
+  margin: auto;
+`;
+
+export const AssetsArticle = styled.article`
+  margin: 20px;
   border: 1px solid #f0f0f0;
   border-radius: 15px;
-  margin: auto;
 `;
 
 export const AssetsTitle = styled.article`
