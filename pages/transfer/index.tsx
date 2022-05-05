@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import TossButton from '@components/button/TossButton';
-import BankSelector from '@components/select/BankSelector';
+import BankSelector from '@components/select';
 import { isTransferSelector } from 'atoms';
 import useTransfer from 'hooks/useTransfer';
 

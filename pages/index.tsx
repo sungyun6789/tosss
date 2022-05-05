@@ -1,4 +1,4 @@
-import Assets from '@components/assets/Assets';
+import Assets from '@components/assets';
 import SponsoredButton from '@components/button/SponsoredButton';
 
 import type { NextPage } from 'next';
