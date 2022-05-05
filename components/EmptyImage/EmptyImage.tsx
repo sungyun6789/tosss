@@ -1,5 +1,6 @@
 import { EmptyImageStyle } from './EmptyImage.style';
+import type { EmptyImageType } from './EmptyImage.type';
 
-const EmptyImage = () => <EmptyImageStyle width={0} height={0} />;
+const EmptyImage = ({ width, height }: EmptyImageType) => <EmptyImageStyle width={width} height={height} />;
 
 export default EmptyImage;
