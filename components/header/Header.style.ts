@@ -32,6 +32,9 @@ export const Nav = styled.nav`
     padding: 0;
 
     div {
+      @media (max-width: 480px) {
+        padding: 10px;
+      }
       padding: 12px 20px;
       cursor: pointer;
       :hover {
