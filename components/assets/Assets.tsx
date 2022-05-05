@@ -1,10 +1,11 @@
+import EmptyImage from '@components/EmptyImage';
 import { assetsSelector } from 'atoms';
 import krw from 'utils/krw';
 
 import { useRouter } from 'next/router';
 import { useRecoilValue } from 'recoil';
 
-import { AssetsArticle, AssetsSection, AssetsTitle, AssetsUL } from './Assets.style';
+import { AssetsArticle, AssetsBalance, AssetsSection, AssetsTitle, AssetsUL } from './Assets.style';
 
 const Assets = () => {
   const router = useRouter();
@@ -18,10 +19,10 @@ const Assets = () => {
           {data.map(({ wallet_name, bank_name, balance }) => (
             <article key={wallet_name} onClick={() => router.push(`/assets/${bank_name}/${wallet_name}`)}>
               <div>
-                <p>Bank Image</p>
+                <EmptyImage width={40} height={40} />
                 <li>{wallet_name}</li>
               </div>
-              <li>{krw(balance)}</li>
+              <AssetsBalance>{krw(balance)}</AssetsBalance>
             </article>
           ))}
         </AssetsUL>

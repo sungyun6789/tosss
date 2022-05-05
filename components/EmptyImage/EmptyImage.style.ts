@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 import type { EmptyImageType } from './EmptyImage.type';
 
-export const EmptyImageStyle = styled.div<EmptyImageType>`
+export const EmptyImageStyle = styled.p<EmptyImageType>`
   width: ${(props) => `${props.width}px`};
   height: ${(props) => `${props.height}px`};
   margin: auto;

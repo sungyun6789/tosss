@@ -12,7 +12,7 @@ export const AssetsArticle = styled.article`
 `;
 
 export const AssetsTitle = styled.article`
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 500;
   margin: 15px;
 `;
@@ -22,7 +22,7 @@ export const AssetsUL = styled.ul`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 60px;
+    height: 80px;
 
     transition: 0.3s;
     cursor: pointer;
@@ -40,11 +40,13 @@ export const AssetsUL = styled.ul`
       width: 100%;
       color: gray;
       text-align: center;
+      margin: 5px 0;
     }
   }
+`;
 
-  li {
-    width: 50%;
-    text-align: center;
-  }
+export const AssetsBalance = styled.li`
+  width: 50%;
+  text-align: center;
+  font-weight: 600;
 `;
