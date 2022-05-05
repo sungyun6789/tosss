@@ -19,6 +19,9 @@ const TransferPage = () => {
 
   const deposit = () => {
     if (depositSelect === withdrawalSelect) return alert('같은 계좌로는 보낼 수 없습니다.');
+    if (assets.find(({ wallet_name }) => wallet_name === depositSelect)!.balance < price!) {
+      return alert('잔고가 부족합니다.');
+    }
 
     /** 송금 */
     transferHook();

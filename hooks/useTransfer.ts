@@ -15,48 +15,44 @@ const useTransfer = ({ price, depositBank, withdrawalBank = '', isAdmin = false 
 
   return () => {
     if (price && depositBank) {
-      if (assets.find(({ wallet_name }) => wallet_name === depositBank)!.balance > price) {
-        setAssets(
-          assets.map((value) => {
-            if (value.wallet_name === depositBank) {
-              return {
-                ...value,
-                balance: value.balance + price,
-                details: [
-                  {
-                    id: value.details!.length + 1,
-                    name: isAdmin ? '관리자 입금' : withdrawalBank,
-                    date,
-                    balance: price,
-                    type: 'deposit',
-                  },
-                  ...value.details!,
-                ],
-              };
-            } else if (value.wallet_name === withdrawalBank) {
-              return {
-                ...value,
-                balance: value.balance - price,
-                details: [
-                  {
-                    id: value.details!.length + 1,
-                    name: depositBank,
-                    date,
-                    balance: price,
-                    type: 'withdrawal',
-                  },
-                  ...value.details!,
-                ],
-              };
-            } else {
-              return value;
-            }
-          }),
-        );
-        alert('보내기에 성공했습니다!');
-      } else {
-        alert('잔고가 부족합니다.');
-      }
+      setAssets(
+        assets.map((value) => {
+          if (value.wallet_name === depositBank) {
+            return {
+              ...value,
+              balance: value.balance + price,
+              details: [
+                {
+                  id: value.details!.length + 1,
+                  name: isAdmin ? '관리자 입금' : withdrawalBank,
+                  date,
+                  balance: price,
+                  type: 'deposit',
+                },
+                ...value.details!,
+              ],
+            };
+          } else if (value.wallet_name === withdrawalBank) {
+            return {
+              ...value,
+              balance: value.balance - price,
+              details: [
+                {
+                  id: value.details!.length + 1,
+                  name: depositBank,
+                  date,
+                  balance: price,
+                  type: 'withdrawal',
+                },
+                ...value.details!,
+              ],
+            };
+          } else {
+            return value;
+          }
+        }),
+      );
+      alert('보내기에 성공했습니다!');
     }
   };
 };
