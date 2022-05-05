@@ -11,6 +11,8 @@ export const NavWrapper = styled.section`
     line-height: 20px;
     text-decoration: none;
   }
+
+  border: 1px solid #f0f0f0;
 `;
 
 export const Nav = styled.nav`

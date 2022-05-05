@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
 
 export const BenefitWrapper = styled.section`
-  width: 1000px;
+  max-width: 1000px;
   margin: auto;
 
   h1 {
     font-size: 20px;
     font-weight: bold;
-    padding: 20px 0;
+    padding: 20px;
   }
 
   article {

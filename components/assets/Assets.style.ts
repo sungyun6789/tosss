@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const AssetsSection = styled.section`
-  width: 800px;
+  max-width: 800px;
   box-sizing: border-box;
   border: 1px solid #f0f0f0;
   border-radius: 15px;
@@ -30,14 +30,18 @@ export const AssetsUL = styled.ul`
   }
 
   div {
-    width: 200px;
+    width: 50%;
+    text-align: center;
 
     li {
+      width: 100%;
       color: gray;
+      text-align: center;
     }
   }
 
   li {
-    width: 200px;
+    width: 50%;
+    text-align: center;
   }
 `;

@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
 
 export const AllPageWrapper = styled.section`
-  width: 1000px;
+  max-width: 1000px;
   margin: auto;
 `;
 
 export const MenuWrapper = styled.div`
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #eeeeee;
   article {
     display: flex;
     justify-content: space-between;
@@ -24,7 +24,7 @@ export const MenuWrapper = styled.div`
 `;
 
 export const MenuTitle = styled.h3`
-  padding: 20px 0;
+  padding: 20px 10px;
   font-size: 20px;
   font-weight: bold;
 `;

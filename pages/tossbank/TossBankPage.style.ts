@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 export const TossBankWrapper = styled.section`
   display: flex;
   justify-content: center;
-  width: 1000px;
   margin: auto;
 
   h1 {
@@ -37,6 +36,7 @@ export const TossBankWrapper = styled.section`
       display: flex;
       justify-content: right;
       margin-bottom: 5px;
+      padding-right: 10px;
     }
   }
 `;
@@ -64,12 +64,12 @@ export const TossBankInfo = styled.article`
 `;
 
 export const TossBankBox = styled.article`
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   border: 1px solid #f0f0f0;
   border-radius: 30px;
   box-sizing: border-box;
-  margin-bottom: 10px;
+  margin: 10px;
 
   p {
     height: 85%;
