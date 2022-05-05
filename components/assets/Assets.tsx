@@ -1,4 +1,4 @@
-import EmptyImage from '@components/EmptyImage';
+import EmptyImage from '@components/image';
 import { assetsSelector } from 'atoms';
 import krw from 'utils/krw';
 
