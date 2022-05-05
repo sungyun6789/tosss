@@ -7,7 +7,7 @@ import { useRecoilValue } from 'recoil';
 import { TossBankBox, TossBankInfo, TossBankWrapper } from './TossBankPage.style';
 
 const TossBankPage = () => {
-  const tossBankData = useRecoilValue(tossBankSelector)[0];
+  const { balance } = useRecoilValue(tossBankSelector)[0];
 
   return (
     <TossBankWrapper>
@@ -16,7 +16,7 @@ const TossBankPage = () => {
         <EmptyImage width={100} height={100} />
         <TossBankInfo>
           <p>토스뱅크 통장</p>
-          <span>{krw(tossBankData.balance)}</span>
+          <span>{krw(balance)}</span>
         </TossBankInfo>
 
         <ul>

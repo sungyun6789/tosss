@@ -15,33 +15,29 @@ import {
 } from './AssetsPage.style';
 
 const AssetsPage = () => {
-  const assets = useRecoilValue(assetsState);
   const router = useRouter();
   const id = router.query.id?.[1];
+  const assets = useRecoilValue(assetsState).filter(({ wallet_name }) => wallet_name === id)[0];
 
   if (!id) return null;
 
-  const matchData = assets.filter(({ wallet_name }) => wallet_name === id)[0];
-
-  if (!matchData || !id) return null;
+  if (!assets || !id) return null;
 
   const headerText =
-    matchData.bank_name === matchData.wallet_name
-      ? matchData.bank_name
-      : `${matchData.bank_name} ${matchData.wallet_name}`;
+    assets.bank_name === assets.wallet_name ? assets.bank_name : `${assets.bank_name} ${assets.wallet_name}`;
 
   return (
     <>
       <AssetsHeader>{headerText}</AssetsHeader>
       <AssetsInfoSection>
-        <span onClick={() => copy(matchData.address)}>{matchData.address}</span>
+        <span onClick={() => copy(assets.address)}>{assets.address}</span>
         <article>
-          <div>{krw(matchData.balance)}</div>
+          <div>{krw(assets.balance)}</div>
         </article>
       </AssetsInfoSection>
-      {matchData.details && (
+      {assets.details && (
         <AsstesDetailSection>
-          {matchData.details.map((data) => (
+          {assets.details.map((data) => (
             <article key={data.id}>
               <div>
                 <DetailName>{data.name}</DetailName>
