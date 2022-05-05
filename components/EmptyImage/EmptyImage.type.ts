@@ -1,4 +1,4 @@
-export interface ImageType {
+export interface EmptyImageType {
   width: number;
   height: number;
 }
