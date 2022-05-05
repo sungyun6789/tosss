@@ -1,5 +1,7 @@
+import { StockPageTitle } from './Stock.style';
+
 const StockPage = () => {
-  return <div>주식</div>;
+  return <StockPageTitle>404 Not Found</StockPageTitle>;
 };
 
 export default StockPage;
