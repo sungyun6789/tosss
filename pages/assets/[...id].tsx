@@ -19,8 +19,6 @@ const AssetsPage = () => {
   const id = router.query.id?.[1];
   const assets = useRecoilValue(assetsState).filter(({ wallet_name }) => wallet_name === id)[0];
 
-  if (!id) return null;
-
   if (!assets || !id) return null;
 
   const headerText =
